@@ -4,8 +4,7 @@ This repository maintains hands-on labs for AI Days Workshop delivered at US MTC
 
 ## Labs
 The labs are divided into four categories:
-- Intelligent Apps
-- Chatbots
+- Intelligent Apps and Bots
 - Knowledge Mining
-- Custom AI
+- Machine Learning
 
