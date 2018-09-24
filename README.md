@@ -4,7 +4,7 @@ This repository maintains hands-on labs for AI Days Workshop delivered at US MTC
 
 ## Labs
 The labs are divided into three categories:
-- Intelligent Apps and Bots
-- Knowledge Mining
-- Machine Learning
+- Building Intelligent Apps and Agents with Azure AI Cognitive Services and Bot Services
+- Discovering latent information in all your data with Azure AI Knowledge Mining
+- Developing custom AI/ML models with Azure AI Machine Learning services
 
