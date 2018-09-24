@@ -3,4 +3,7 @@ This folder contains hands-on labs that demonstrate how you can use Cognitive Se
 
 The labs:
 
-- 01-CustomVisionService-ImageClassification
+## 01-CustomVisionService-ImageClassification
+This lab demonstrates how to train, use, deploy a custom image classification model using Microsoft Cognitive Services Custom Vision Service
+
+
