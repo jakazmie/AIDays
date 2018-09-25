@@ -82,7 +82,7 @@ display(dbutils.fs.ls(img_dir))
 # MAGIC 
 # MAGIC ### Prepare training and validation dataframes
 # MAGIC 
-# MAGIC Deep Learning Pipelines require training and validation datasets to be in Spark DataFrames with a specific schema. The below code loads 6000 training images to a DataFrame. It than adds a new `label` column which annotates an image with a type of land it depicts. The  label is extracted from a pathname of an image.
+# MAGIC Deep Learning Pipelines require training data to be loaded into Spark DataFrames. The below code utilizes Spark's native support for image data to load 6000 training images to a DataFrame. It than adds a new column called `label` that annotates an image with a type of land it depicts. The  label is extracted from the pathname of the image.
 
 # COMMAND ----------
 
@@ -99,7 +99,7 @@ img_df = ImageSchema.readImages(img_dir + 'train', recursive=True)
 # COMMAND ----------
 
 # MAGIC %md
-# MAGIC #### Add the labels and split into training and validation DataFrames.
+# MAGIC #### Add the label column and split data into training and validation DataFrames.
 
 # COMMAND ----------
 
@@ -121,13 +121,13 @@ display(img_train.limit(10))
 # MAGIC %md
 # MAGIC ## Train and evaluate model 
 # MAGIC 
-# MAGIC As noted in the introduction to the lab we will use Transfer Learning to train a custom image classifier. The classifier's architecture is depicted on a diagram below.
+# MAGIC As noted in the introduction to the lab, we will use Transfer Learning to train a custom image classifier. The classifier's architecture is depicted on the diagram below.
 # MAGIC 
 # MAGIC ![Model arch](https://github.com/jakazmie/AIDays/raw/master/MachineLearning/01-AzureDatabricks-DeepLearningPipelines/images/TransferLearning.png)
 # MAGIC 
-# MAGIC The model's input is a raw 224 x 224 images in RGB format. A single image is represented by a 3-dimensional array or a tensor of rank 3. The image is passed to a pre-trained Deep Neural Network - in our case ResNet50 - that converts a raw image to a vector of features - 2048 in ResNet50. The DNN was trained on a large corpus of images - 14 milion. As a result the returned features can be interpreted as essential characteristics of an input image. On top of the pre-trained network we layer a simple multinomial classifier - logistic regression. During training we effectively only train the logistic regression classifier. The base pre-trained DNN is not modified.
+# MAGIC The model's input is a raw 224 x 224 image in RGB format. A single image is represented by a 3-dimensional array or a tensor of rank 3. The image is passed to a pre-trained Deep Neural Network - in our case ResNet50 - that converts a raw image to a vector of features - 2048 to be exact. The DNN was trained on a large corpus of images - 14 milion - from different visual domains. As a result, the returned features can be interpreted as essential characteristics of an input image. On top of the pre-trained network we layer a simple multinomial classifier - logistic regression. During training, we effectively only train the logistic regression classifier. The base pre-trained DNN is not modified.
 # MAGIC 
-# MAGIC We will utilize a Spark ML pipeline for training. The pipeline comprises four stages. In stage 1, a string label will be converted to a numeric one - this is the requirement of Spark ML Logistic Regression classifier. In stage 2, a pretrained ResNet50 DNN will be applied as a featurizer. The third stage is a LogisticRegression model. And finally, in stage 4, a predicted label will be converted back to a string.
+# MAGIC You will utilize Spark ML pipeline for defining a training workflow. The pipeline comprises four stages. In stage 1, a string label will be converted to a numeric one - this is the requirement of Spark ML Logistic Regression classifier. In stage 2, a pretrained ResNet50 DNN will be applied as a featurizer. The third stage is a LogisticRegression model. And finally, in stage 4, a predicted label will be converted back to a string.
 
 # COMMAND ----------
 
@@ -163,6 +163,10 @@ pipeline = Pipeline(stages=[labelIndexer, featurizer, classifier, labelConverter
 # MAGIC %md
 # MAGIC 
 # MAGIC #### Train the model
+# MAGIC 
+# MAGIC Note, that getting the best results in machine learning requires experimenting with different values for training parameters, an important step called hyperparameter tuning. When using Logistic Regression two key parameters to tune are L1 and L2 regularization parameters. Since Deep Learning Pipelines enables exposing deep learning training as a step in Spark’s machine learning pipelines, users can rely on the hyperparameter tuning infrastructure already built into Spark MLlib. 
+# MAGIC 
+# MAGIC For the sake of the time, we will skip the hyperparameter tuning process.
 
 # COMMAND ----------
 
@@ -173,13 +177,15 @@ model = pipeline.fit(img_train)
 # MAGIC %md
 # MAGIC #### Evaluate the model
 # MAGIC 
-# MAGIC Calculate the model's `accuracy`  on a validation data set
+# MAGIC Now when the model is trained, you should evaluate its performance. Since this is a classification model you can use one or more of classification performance metrics, for example the model's `accuracy`.
 
 # COMMAND ----------
 
 from pyspark.ml.evaluation import MulticlassClassificationEvaluator
 
+# Apply the model to the validation dataset
 validated_df = model.transform(img_validate)
+# Calculate accuracy
 evaluator = MulticlassClassificationEvaluator(labelCol="indexedLabel", predictionCol="prediction", metricName="accuracy")
 print("Test set accuracy = " + str(evaluator.evaluate(validated_df.select("prediction", "indexedLabel"))))
                                                                           
@@ -202,7 +208,7 @@ display(misclassified_df)
 # MAGIC 
 # MAGIC ## Operationalize and manage
 # MAGIC 
-# MAGIC There are many options for operationalizing a trained model. The most basic one is to use a model as a data frame transformer that processes an input DataFrame and returns an output DataFrame with additional columns that represent predictions - in our case a label describing the image, and a probability associated with the label. 
+# MAGIC There are many options for operationalizing a trained model. The most basic one is to use the model as a data frame transformer that processes an input DataFrame and returns an output DataFrame with additional columns added that represent predictions - in our case a label describing the image, and a probability associated with the label. 
 # MAGIC 
 # MAGIC The other options are:
 # MAGIC - Exporting using MLeap
@@ -211,13 +217,13 @@ display(misclassified_df)
 # MAGIC 
 # MAGIC Note that not all options are currently supported for all training workflows. Specifically, there are limitations when using Deep Learning Pipelines, as the technology is still in early stages of development.  
 # MAGIC 
-# MAGIC In this lab, you will learn how to apply a model as a batch transformer.
+# MAGIC In the next step of the lab, you will learn how to apply a model as a batch transformer.
 
 # COMMAND ----------
 
 # MAGIC %md
 # MAGIC ### Serialize and save the model
-# MAGIC Currently, you cannot serialize the DeepImageFeaturizer stage. Since DeepImageFeaturizer does not have any trainable parameters this is not a major issue. You simply remove DeepImageFeaturizer before serialization and add it explicitly to the pipeline when you load the model at a later time. You also don't need the stage that converts a string label to a numeric one. It is not needed during inference.
+# MAGIC Currently, you cannot serialize the DeepImageFeaturizer stage. Since DeepImageFeaturizer does not have any trainable parameters this is not a major issue. You simply remove DeepImageFeaturizer before serialization and add it explicitly to the pipeline when you load the model at the later time. You also don't need the stage that converts a string label to a numeric one. It is not needed during inference.
 
 # COMMAND ----------
 
@@ -235,7 +241,7 @@ model.stages
 # MAGIC %md
 # MAGIC The model is now persisted to a disk. If you use a model management solution like Azure ML you can track it as a configuration management item.
 # MAGIC 
-# MAGIC If at some later time in future you want to use the model for scoring (inference) you can load from the disk.
+# MAGIC If at some later time you want to use the model for scoring (inference) you can load it from the disk.
 
 # COMMAND ----------
 
