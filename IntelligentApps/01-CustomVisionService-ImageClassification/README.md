@@ -19,7 +19,7 @@ You will train a custom image classification model to automatically classify the
 
 Developed | Cultivated | Barren
 --------- | ------ | ----------
-![Developed](images/developed1.png) | ![Barren](images/barren1.png) | ![Cultivated](images/cultivated1.png)
+![Developed](images/developed1.png) | ![Cultivated](images/cultivated1.png) | ![Barren](images/barren1.png)
 
 
 ## Lab environment
