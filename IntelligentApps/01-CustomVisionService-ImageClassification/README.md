@@ -58,8 +58,22 @@ https://customvision.ai
 ![new resource group](images/rg.png)
 
 
-Congratulations! Your lab environment is ready.
+Congratulations! Your Custom Vision Service project is ready
 
-Navigate back to the Jupyter Lab and start `train.ipynb` notebook.
+### Provision and configure Azure Notebooks
+
+1. Navigate to
+
+https://notebooks.azure.com
+
+2. Sign in with your Azure account
+
+3. Click on **Libraries**
+
+[!Libraries](images/notebook1.png)
+
+
+
+
 
 
