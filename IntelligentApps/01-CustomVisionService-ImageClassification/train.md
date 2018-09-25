@@ -16,7 +16,7 @@ https://customvision.ai/projects
 
 ![Select the project](images/img4.PNG)
 
-3. To add the first set of images to your project, use the **Add images** button. Navigate to `AerialSmall/train/Barren` and select and add all images.
+3. To add the first set of images to your project, use the **Add images** button. Navigate to `aerial/train/Barren` and select and add all images.
 
 ![Add images](images/img5.PNG)
 
@@ -37,7 +37,7 @@ https://customvision.ai/projects
 
 ## Test your model
 1. You can perform a quick test of the model on unseen data by clicking the **Quick Test** button located to the right of the **Train**. This action opens a window labeled **Quick Test**.
-2. In the **Quick Test** window click the Browse local files button and select a local image file. The testing images for our lab can be found in `AerialSmall/test`
+2. In the **Quick Test** window click the Browse local files button and select a local image file. The testing images for our lab can be found in `aerial/test`
 
 ![Quick est](images/img8.PNG)
 
@@ -56,7 +56,7 @@ Recall that the images tagged as *Developed* had the lowest **Precision** metric
 
 2. You can re-label the image(s) by selecting it and clicking on the **Tag images** button. Re-label the images in question to the class that in your opinion is the right label.
 
-3. You will also add additional images to the *Developed* class. You can find them in `AerialSmall/train/Developed-SecondBatch`. Select and label all images from that folder.
+3. You will also add additional images to the *Developed* class. You can find them in `aerial/train/Developed-SecondBatch`. Select and label all images from that folder.
 
 4. Click on **Train** button to retrain the model. You will notice the second iteration of the model after the training is completed. Your instructor will explain the concept of the iteration in more detail. 
 
