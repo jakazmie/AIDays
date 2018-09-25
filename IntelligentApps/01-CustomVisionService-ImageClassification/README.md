@@ -70,7 +70,7 @@ https://notebooks.azure.com
 
 3. Click on **Libraries**
 
-[!Libraries](images/notebook1.png)
+![Libraries](images/notebook1.png)
 
 
 
