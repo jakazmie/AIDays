@@ -1,5 +1,6 @@
 # Model training 
-In this step you will train, evaluate, and fine tune a custom image classification model using Custom Vision Service Web GUI. Note that it is also possible to script the modelling workflow using Custom Vision Service SDK. 
+In this step you will train, evaluate, and fine tune a custom image classification model using Custom Vision Service web interface. Note that it is also possible to script the modelling workflow using Custom Vision Service SDK. 
+
 ## Prepare training data
 The dataset used in this exercise can be downloaded from:
 
