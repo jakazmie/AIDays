@@ -8,4 +8,7 @@ The labs:
 This lab walks you through building a custom image classification model using Transfer Learning and Azure Databricks Deepl Learning Pipelines
 
 
+## 11-AMLWalkthrough
+This lab is an end-to-end walkthrough of Azure Machine Learning service.
+
 
