@@ -29,7 +29,7 @@ https://aka.ms/aml-clone-azure-notebooks
 
 ![Import](images/signin.png)
 
-4. Click on **Import**. This will create Azure Notebooks Library with walkthrough files
+4. Click on **Import**. This will create Azure Notebooks Library with all lab files
 
 ![Create](images/create.png)
 
