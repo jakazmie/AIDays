@@ -9,8 +9,11 @@ In this step, you will learn how to access the REST prediction endpoint that was
 
 2. Navigate to the Azure Notebooks library you created during the lab environment setup.
 
-3. 
+3. Add a new Item from URL. Use the below link to import `predict.ipynb` from the lab's github repo
+
+https://raw.githubusercontent.com/jakazmie/AIDays/master/IntelligentApps/01-CustomVisionService-ImageClassification/predict.ipynb
 
 
+4. Start the notebook and follow the instructor
 
-4. Walk-through the notebook following the instructor
+
