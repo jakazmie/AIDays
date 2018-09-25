@@ -53,7 +53,10 @@ https://customvision.ai
 ![new project](images/newproject.png)
 
   
-6. Click on *Keys*. You will need one of the keys later in the lab. 
+5. Fill the form to create a resource group that will host Custom Vision Service resources. Use your Azure subscription. a
+
+![new resource group](images/rg.png)
+
 
 Congratulations! Your lab environment is ready.
 
