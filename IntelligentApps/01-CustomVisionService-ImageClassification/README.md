@@ -72,6 +72,9 @@ https://notebooks.azure.com
 
 ![Libraries](images/notebook1.png)
 
+4. Create a new library to host the lab's notebooks
+
+![New Library](images/newlib.png)
 
 
 
