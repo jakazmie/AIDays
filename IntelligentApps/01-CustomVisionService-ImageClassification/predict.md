@@ -16,4 +16,5 @@ https://raw.githubusercontent.com/jakazmie/AIDays/master/IntelligentApps/01-Cust
 
 4. Start the notebook and follow the instructor
 
+After you have completed the walkthroug of `predict.ipynb` procedd to the [next step](export.md)
 
