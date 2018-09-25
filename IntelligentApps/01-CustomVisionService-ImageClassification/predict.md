@@ -7,11 +7,10 @@ In this step, you will learn how to access the REST prediction endpoint that was
 ![Mark iteration](images/img12.PNG)
 
 
-2. Log in to Jupyter Lab on your DSVM
+2. Navigate to the Azure Notebooks library you created during the lab environment setup.
 
-3. Navigate to `MTC_AzureAILabs/Lab01-CustomVisionService/Exercise2-Predict` and start `predict.ipynb`
+3. 
+
+
 
 4. Walk-through the notebook following the instructor
-
-[Next step](https://github.com/Microsoft/MTC_AzureAILabs/tree/master/Lab01-CustomVisionService/Exercise3-Export)
-
