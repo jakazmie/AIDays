@@ -67,5 +67,5 @@ Recall that the images tagged as *Developed* had the lowest **Precision** metric
 
 Congratulations. You have developed an accurate custom image classifier.
 
-[Next step](https://github.com/Microsoft/MTC_AzureAILabs/tree/master/Lab01-CustomVisionService/Exercise2-Predict)
+[Next step](predict.md)
 
