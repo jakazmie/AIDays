@@ -1,1 +1,4 @@
 
+https://github.com/jakazmie/AIDays/raw/master/IntelligentApps/01-CustomVisionService-ImageClassification/samples/barren-1.png
+https://github.com/jakazmie/AIDays/raw/master/IntelligentApps/01-CustomVisionService-ImageClassification/samples/cultivated-1.png
+https://github.com/jakazmie/AIDays/raw/master/IntelligentApps/01-CustomVisionService-ImageClassification/samples/developed-1.png
