@@ -22,7 +22,7 @@
 # MAGIC 
 # MAGIC Transfer learning is one of the fastest (code and run-time-wise) ways to start using deep learning. In a summary, transfer learning  is a machine learning technique that allows to reuse knowledge gained while solving one problem to a different but related problem. For example, knowledge gained while learning to recognize cars could apply when trying to recognize trucks. Transfer Learning makes it feasible to train very effective ML models on relatively small training data sets.
 # MAGIC 
-# MAGIC In this lab, your will use Transfer Learing to train a custom image classification model. You use a deep neural network pre-trained on a general computer vision domain (*imagenet* dataset) and specialize it to classify the type of land shown in aerial images of 224-meter x 224-meter plots. 
+# MAGIC In this lab, your will use Transfer Learing to train a custom image classification model. You will use a deep neural network pre-trained on a general computer vision domain (*imagenet* dataset) and specialize it to classify the type of land shown in aerial images of 224-meter x 224-meter plots. 
 # MAGIC 
 # MAGIC Land use classification models can be used to track urbanization, deforestation, loss of wetlands, and other major environmental trends using periodically collected aerial imagery. The images used in this lab are based on imagery from the U.S. National Land Cover Database. U.S. National Land Cover Database defines six primary classes of land use: *Developed*, *Barren*, *Forested*, *Grassland*, *Shrub*, *Cultivated*.  Example images in each land use class are shown here:
 # MAGIC 
@@ -34,6 +34,12 @@
 # MAGIC Forested | Grassland | Shrub
 # MAGIC -------- | --------- | -----
 # MAGIC ![Forested](https://github.com/jakazmie/AIDays/raw/master/MachineLearning/01-AzureDatabricks-DeepLearningPipelines/images/forest1.png) | ![Grassland](https://github.com/jakazmie/AIDays/raw/master/MachineLearning/01-AzureDatabricks-DeepLearningPipelines/images/grassland1.png) | ![Shrub](https://github.com/jakazmie/AIDays/raw/master/MachineLearning/01-AzureDatabricks-DeepLearningPipelines/images/shrub1.png)
+# MAGIC 
+# MAGIC During the lab you will walk through a typical machine learning workflow.
+# MAGIC 
+# MAGIC ![Workflow](https://github.com/jakazmie/AIDays/raw/master/MachineLearning/01-AzureDatabricks-DeepLearningPipelines/images/MLWorkflow.png)
+# MAGIC 
+# MAGIC Let's start.
 
 # COMMAND ----------
 
@@ -58,7 +64,7 @@
 # MAGIC %md
 # MAGIC ### Copy images to DBFS
 # MAGIC 
-# MAGIC The previous commands extracted the images to the local storage on a driver node. You need to move them to Azure Databricks DBFS
+# MAGIC The images have been extracted to the local storage on your cluster's driver node. You need to move them to Azure Databricks DBFS.
 
 # COMMAND ----------
 
@@ -76,7 +82,7 @@ display(dbutils.fs.ls(img_dir))
 # MAGIC 
 # MAGIC ### Prepare training and validation dataframes
 # MAGIC 
-# MAGIC Deep Learning Pipelines require training and validation datasets to be in Spark data frames with a specific schema. The below code loads 6000 training images to a data frame. It than adds a new `label` column which annotates an image with a type of land it depicts. The  label is extracted from a pathname of an image.
+# MAGIC Deep Learning Pipelines require training and validation datasets to be in Spark DataFrames with a specific schema. The below code loads 6000 training images to a DataFrame. It than adds a new `label` column which annotates an image with a type of land it depicts. The  label is extracted from a pathname of an image.
 
 # COMMAND ----------
 
@@ -93,7 +99,7 @@ img_df = ImageSchema.readImages(img_dir + 'train', recursive=True)
 # COMMAND ----------
 
 # MAGIC %md
-# MAGIC #### Add the labels and split into training and validation datasets.
+# MAGIC #### Add the labels and split into training and validation DataFrames.
 
 # COMMAND ----------
 
@@ -114,6 +120,14 @@ display(img_train.limit(10))
 
 # MAGIC %md
 # MAGIC ## Train and evaluate model 
+# MAGIC 
+# MAGIC As noted in the introduction to the lab we will use Transfer Learning to train a custom image classifier. The classifier's architecture is depicted on a diagram below.
+# MAGIC 
+# MAGIC ![Model arch](https://github.com/jakazmie/AIDays/raw/master/MachineLearning/01-AzureDatabricks-DeepLearningPipelines/images/TransferLearning.png)
+# MAGIC 
+# MAGIC The model's input is a raw 224 x 224 images in RGB format. A single image is represented by a 3-dimensional array or a tensor of rank 3. The image is passed to a pre-trained Deep Neural Network - in our case ResNet50 - that converts a raw image to a vector of features - 2048 in ResNet50. The DNN was trained on a large corpus of images - 14 milion. As a result the returned features can be interpreted as essential characteristics of an input image. On top of the pre-trained network we layer a simple multinomial classifier - logistic regression. During training we effectively only train the logistic regression classifier. The base pre-trained DNN is not modified.
+# MAGIC 
+# MAGIC We will utilize a Spark ML pipeline for training. The pipeline comprises four stages. In stage 1, a string label will be converted to a numeric one - this is the requirement of Spark ML Logistic Regression classifier. In stage 2, a pretrained ResNet50 DNN will be applied as a featurizer. The third stage is a LogisticRegression model. And finally, in stage 4, a predicted label will be converted back to a string.
 
 # COMMAND ----------
 
@@ -187,33 +201,49 @@ display(misclassified_df)
 # MAGIC %md
 # MAGIC 
 # MAGIC ## Operationalize and manage
+# MAGIC 
+# MAGIC There are many options for operationalizing a trained model. The most basic one is to use a model as a data frame transformer that processes an input DataFrame and returns an output DataFrame with additional columns that represent predictions - in our case a label describing the image, and a probability associated with the label. 
+# MAGIC 
+# MAGIC The other options are:
+# MAGIC - Exporting using MLeap
+# MAGIC - Operationalizng with Azure Machine Learning
+# MAGIC - Wrapping in Spark SQL UDF
+# MAGIC 
+# MAGIC Note that not all options are currently supported for all training workflows. Specifically, there are limitations when using Deep Learning Pipelines, as the technology is still in early stages of development.  
+# MAGIC 
+# MAGIC In this lab, you will learn how to apply a model as a batch transformer.
 
 # COMMAND ----------
 
+# MAGIC %md
+# MAGIC ### Serialize and save the model
+# MAGIC Currently, you cannot serialize the DeepImageFeaturizer stage. Since DeepImageFeaturizer does not have any trainable parameters this is not a major issue. You simply remove DeepImageFeaturizer before serialization and add it explicitly to the pipeline when you load the model at a later time. You also don't need the stage that converts a string label to a numeric one. It is not needed during inference.
+
+# COMMAND ----------
+
+# Remove label conversion stage
+model.stages.pop(0)
+# Remove DeepImageFeaturizer stage
+model.stages.pop(0)
+# Serialize and save the model
+save_model_path = '/models/landclassifier'
+model.write().overwrite().save(save_model_path)
 model.stages
 
 # COMMAND ----------
 
 # MAGIC %md
-# MAGIC Remove StringIndexer and DeepImageFeaturizer
-
-# COMMAND ----------
-
-save_model = model.copy()
-save_model.stages.pop(0)
-save_model.stages.pop(0)
-save_model.stages
-
-# COMMAND ----------
-
-save_model_path = '/models/landclassifier'
-save_model.write().overwrite().save(model_path)
+# MAGIC The model is now persisted to a disk. If you use a model management solution like Azure ML you can track it as a configuration management item.
+# MAGIC 
+# MAGIC If at some later time in future you want to use the model for scoring (inference) you can load from the disk.
 
 # COMMAND ----------
 
 # MAGIC %md
 # MAGIC 
-# MAGIC Load the model and insert DeepImageFeaturizer stage
+# MAGIC ### Load the model
+# MAGIC 
+# MAGIC As noted before, the DeepImageFeaturizer stage has to be added to the restored model pipeline.
 
 # COMMAND ----------
 
@@ -228,7 +258,22 @@ landclassifier.stages
 
 # MAGIC %md
 # MAGIC 
-# MAGIC You can use the model as a regular transformer
+# MAGIC You can now use the loaded model for batch inference.
+
+# COMMAND ----------
+
+test_img_df = ImageSchema.readImages(img_dir + 'test', recursive=True)
+scored_img_df = landclassifier.transform(test_img_df)
+
+# COMMAND ----------
+
+display(scored_img_df.select('image', 'predictedLabel').limit(10))
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC 
+# MAGIC ## THE END
 
 # COMMAND ----------
 
