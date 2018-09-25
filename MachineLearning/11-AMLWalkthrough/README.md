@@ -16,3 +16,24 @@ The walkthrough is based on AML Quickstart and Tutorial.
 - An Azure subscription
 - Internet browser - Chrome preferred
 
+## Lab environment set up
+
+1. Navigate to Azure Notebooks AML import page:
+https://aka.ms/aml-clone-azure-notebooks
+
+2. Click on **Import**
+
+![Import](images/import.png)
+
+3. Sign in with your Azure account:
+
+![Import](images/signin.png)
+
+4. Click on **Import**. This will create Azure Notebooks Library with walkthrough files
+
+![Create](images/create.png)
+
+Your environment is ready.
+
+Follow the instructor who will walk you through the exercises.
+
