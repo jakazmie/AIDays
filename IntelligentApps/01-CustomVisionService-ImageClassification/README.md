@@ -1,5 +1,5 @@
 # Building a custom image classification solution with Custom Vision Service
-n this lab you will train, evaluate, deploy, and use a custom image classification model using Microsoft Cognitive Services Custom Vision Service. 
+In this lab you will train, evaluate, deploy, and use a custom image classification model using Microsoft Cognitive Services Custom Vision Service. 
 
 The lab is designed to be instructor guided.  In addition to walking you through the lab's steps, the instructor will explain key concepts and as necessary deep dive into technical details. 
 
@@ -9,12 +9,6 @@ Don't hesitate to ask questions !
 The lab consists of 2 parts:
 - In the first part you will learn how to train, evaluate, fine tune, and invoke a custom image classification model.
 - In the the second part, you will export your model as a docker image so it can be deployed into an arbitrary inference environment
-
-In this lab we will use Custom Vision Service Python SDK and Jupyter notebooks. Note, that there are other ways of working with Custom Vision Service, including Go and C# SDKs and Custom Vision Service GUI. In fact all these interfaces are front-ends to Custom Vision Service REST API that is thoroughly documented in the following links:
-
-https://southcentralus.dev.cognitive.microsoft.com/docs/services/d0e77c63c39c4259a298830c15188310/operations/39b14cb5f7f34977a6e6a290
-
-https://southcentralus.dev.cognitive.microsoft.com/docs/services/450e4ba4d72542e889d93fd7b8e960de/operations/5a6264bc40d86a0ef8b2c290
 
 
 
