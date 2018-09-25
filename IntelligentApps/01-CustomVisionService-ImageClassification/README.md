@@ -48,6 +48,9 @@ https://customvision.ai
 
 ![Custom vision](images/projects.png)
 
+4. In the **NEW PROJECT** dialog box select *Classification* for the project type, *Multiclass* for the classification type, and *General* for the domain type. Then click on **create new** *Resource Group*
+
+![new project](images/newporoject.png)
 
   
 6. Click on *Keys*. You will need one of the keys later in the lab. 
