@@ -78,5 +78,11 @@ https://notebooks.azure.com
 
 
 
+Your environment is ready.
+
+[Next step](train.md)
+
+
+
 
 
