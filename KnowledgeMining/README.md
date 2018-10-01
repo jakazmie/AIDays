@@ -4,15 +4,15 @@
 Cognitive search adds data extraction, natural language processing (NLP), and image processing to an Azure Search indexing pipeline, making unsearchable or unstructured content more searchable. Information created by a skill, such as entity recognition or image analysis, gets added to an index in Azure Search.
 
 Let’s try the enrichment pipeline in the Azure portal before writing a single line of code:
-•	Begin with sample data in Azure Blob storage
-•	Configure the Import Wizard for indexing and enrichment
-•	Run the wizard (an entity skill detects people, location, and organizations)
-•	Use Search Explorer to query the enriched data.
+* Begin with sample data in Azure Blob storage
+* Configure the Import Wizard for indexing and enrichment
+* Run the wizard (an entity skill detects people, location, and organizations)
+* Use Search Explorer to query the enriched data.
 
 ## Prerequisites ##
 Azure services are used exclusively in this scenario. Creating the services you need is part of the preparation.
-•	Azure Blob storage provides the source data.
-•	Azure Search handles data ingestion and indexing, cognitive search enrichment, and full text search queries.
+* Azure Blob storage provides the source data.
+* Azure Search handles data ingestion and indexing, cognitive search enrichment, and full text search queries.
 
 ## Set up Azure Search ##
 First, sign up for the Azure Search service.
@@ -66,9 +66,9 @@ Natural language processing skills operate over text content in the sample data 
 ## Step 3: Configure the index ##
 Remember the index that was created with the data source? In this step, you can view its schema and potentially revise any settings.
 For this quickstart, the wizard does a good job setting reasonable defaults:
-•	Every index must have a name. For this data source type, the default name is azureblob-index.
-•	Every document must have a key. The wizard chooses a field having unique values. In this quickstart, the key is metadata_storage_path.
-•	Every field collection must have fields with a data type describing its values, and each field should have index attributes that describe how its used in a search scenario.
+* Every index must have a name. For this data source type, the default name is azureblob-index.
+* Every document must have a key. The wizard chooses a field having unique values. In this quickstart, the key is metadata_storage_path.
+* Every field collection must have fields with a data type describing its values, and each field should have index attributes that describe how its used in a search scenario.
 Because you defined a skillset, the wizard assumes that you want the source data field, plus the output fields created by the skills. For this reason, the portal adds index fields for content, people, organizations, and locations. Notice that the wizard automatically enables Retrievable and Searchable for these fields.
 In Customize index, review the attributes on the fields to see how they are used in an index. Searchable indicates a field can be searched. Retrievable means it can be returned in results.
 Consider clearing Retrievable from the content field. In blobs, this field can run into thousands of lines, difficult to read in a tool like Search explorer.
