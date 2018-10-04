@@ -6,3 +6,5 @@ The labs are divided into three categories:
 - Discovering latent information in all your data with Azure AI Knowledge Mining
 - Developing custom AI/ML models with Azure AI Machine Learning services
 
+
+
