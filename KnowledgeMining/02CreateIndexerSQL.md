@@ -50,7 +50,6 @@ For this tutorial, we use a built-in sample dataset that can be crawled using an
 
 **Import data** provides an optional cognitive skills step that enables you to add custom AI algorithms to indexing. Skip this step for now, and move on to **Customize target index**.
 
-> [!TIP]
 > You can try the new cognitive search preview feature for Azure Search from [cognitive search quickstart](cognitive-search-quickstart-blob.md) or [tutorial](cognitive-search-tutorial-blob.md).
 
    ![Skip cognitive skill step][11]
