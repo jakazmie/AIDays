@@ -43,5 +43,4 @@ Remember to pin your service to the dashboard for easy access whenever you sign 
 ![](./media/search-create-service-portal/new-service3.png)
 
 ---
-[02.Create Index fro DB]()
-
+[02.Create Indexer from Structured Data](https://github.com/jakazmie/AIDays/blob/master/KnowledgeMining/02CreateIndexerSQL.md)

@@ -1,4 +1,4 @@
-# 03. Create Indexer for Unstructured Data
+# Knowledge Mining hands-on labs
 
 ## Cognitive search ##
 Cognitive search adds data extraction, natural language processing (NLP), and image processing to an Azure Search indexing pipeline, making unsearchable or unstructured content more searchable. Information created by a skill, such as entity recognition or image analysis, gets added to an index in Azure Search.
@@ -98,6 +98,3 @@ If you can't scan results easily, use CTRL-F to search within documents. For thi
 CTRL-F can also help you determine how many documents are in a given result set. For Azure blobs, the portal chooses "metadata_storage_path" as the key because each value is unique to the document. Using CTRL-F, search for "metadata_storage_path" to get a count of documents. For this query, two documents in the result set contain the term "John F. Kennedy".
 
 ![skillset](images/9-search-explorer.png)
-
----
-[04. Integrate Search into your Web App](https://github.com/jakazmie/AIDays/blob/master/KnowledgeMining/04IntegrateintoApp.md)

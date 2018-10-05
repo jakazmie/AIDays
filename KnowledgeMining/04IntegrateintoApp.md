@@ -7,4 +7,4 @@
 ### 04.03. Update codes and Run
 
 ---
-[Next]()
+[05. Clean up](https://github.com/jakazmie/AIDays/blob/master/KnowledgeMining/05Cleanup.md)
