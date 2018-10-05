@@ -23,8 +23,9 @@ For a quick review and ramp up on Azure Search concepts, you can use the built-i
 Many customers start with the free service. This version is limited to three indexes, three data sources, and three indexers. Make sure you have room for extra items before you begin. This tutorial creates one of each object.
 
 > Tiles on the service dashboard show how many indexes, indexers, and data sources you already have. The Indexer tile shows success and failure indicators. Click the tile to view the indexer count.
-
-![Tiles for indexers and datasources](./media/search-get-started-portal/tiles-indexers-datasources2.png)
+>
+> ![Tiles for indexers and datasources](./media/search-get-started-portal/tiles-indexers-datasources2.png)
+>
 
 ## <a name="create-index"></a> Create an index and load data
 
@@ -36,11 +37,11 @@ For this tutorial, we use a built-in sample dataset that can be crawled using an
 
 1. From the Azure Search service dashboard, click **Import data** on the command bar to start the wizard. This wizard helps you create and populate a search index.
 
-    ![Import data command][2]
+    ![Import data command](./media/search-get-started-portal/import-data-cmd2.png)
 
 2. In the wizard, click **Connect to your data** > **Samples** > **realestate-us-sample**. This data source is preconfigured with a name, type, and connection information. Once created, it becomes an "existing data source" that can be reused in other import operations.
 
-    ![Select sample dataset][9]
+    ![Select sample dataset](./media/search-get-started-portal/import-datasource-sample2.png)
 
 3. Click **OK** to use it.
 
@@ -50,7 +51,7 @@ For this tutorial, we use a built-in sample dataset that can be crawled using an
 
 > You can try the new cognitive search preview feature for Azure Search from [cognitive search quickstart](cognitive-search-quickstart-blob.md) or [tutorial](cognitive-search-tutorial-blob.md).
 
-   ![Skip cognitive skill step][11]
+   ![Skip cognitive skill step](./media/search-get-started-portal/skip-cog-skill-step.png)
 
 ### Step 2: Define the index
 
@@ -64,7 +65,7 @@ Fields have data types and attributes. The check boxes across the top are *index
 
 By default, the wizard scans the data source for unique identifiers as the basis for the key field. Strings are attributed as retrievable and searchable. Integers are attributed as retrievable, filterable, sortable, and facetable.
 
-  ![Generated realestate index][3]
+  ![Generated realestate index](./media/search-get-started-portal/realestateindex2.png)
 
 Click **OK** to create the index.
 
@@ -74,13 +75,13 @@ Still in the **Import data** wizard, click **Indexer** > **Name**, and type a na
 
 This object defines an executable process. You could put it on recurring schedule, but for now use the default option to run the indexer once, immediately, when you click **OK**.  
 
-  ![realestate indexer][8]
+  ![realestate indexer](./media/search-get-started-portal/realestate-indexer2.png)
 
 ### Check progress
 
 To monitor data import, go back to the service dashboard, scroll down, and double-click the **Indexers** tile to open the indexers list. You should see the newly created indexer in the list, with status indicating "in progress" or success, along with the number of documents indexed.
 
-   ![Indexer progress message][4]
+   ![Indexer progress message](./media/search-get-started-portal/indexers-inprogress2.png)
 
 ### Step 4: View the index
 
@@ -88,7 +89,7 @@ Tiles in the service dashboard provide both summary information of the various o
 
 Click the *realestate-us-sample* index now to view the portal options for its definition. An **Add/Edit Fields** option allows you to create and fully attribute new fields. Existing fields have a physical representation in Azure Search and are thus non-modifiable, not even in code. To fundamentally change an existing field, create a new one and the drop the original.
 
-   ![sample index definition][10]
+   ![sample index definition](./media/search-get-started-portal/sample-index-def.png)
 
 Other constructs, such as scoring profiles and CORS options, can be added at any time.
 
@@ -98,13 +99,9 @@ To clearly understand what you can and cannot edit during index design, take a m
 
 Moving forward, you should now have a search index that's ready to query using the built-in [**Search explorer**](search-explorer.md) query page. It provides a search box so that you can test arbitrary query strings.
 
-> [!TIP]
-> The following steps are demonstrated at 6m08s into the [Azure Search Overview video](https://channel9.msdn.com/Events/Connect/2016/138).
->
-
 1. Click **Search explorer** on the command bar.
 
-   ![Search explorer command][5]
+   ![Search explorer command](./media/search-get-started-portal/search-explorer-changeindex-se2.png)
 
 2. Click **Change index** on the command bar to switch to *realestate-us-sample*. Click **Set API version** on the command bar to see which REST APIs are available. For the queries below, use the generally available version (2017-11-11).
 
@@ -112,7 +109,6 @@ Moving forward, you should now have a search index that's ready to query using t
 
 3. In the search bar, enter the query strings below and click **Search**.
 
-    > [!NOTE]
     > **Search explorer** is only equipped to handle [REST API request](https://docs.microsoft.com/rest/api/searchservice/search-documents). It accepts syntax for both [simple query syntax](https://docs.microsoft.com/rest/api/searchservice/simple-query-syntax-in-azure-search) and [full Lucene query parser](https://docs.microsoft.com/rest/api/searchservice/lucene-query-syntax-in-azure-search), plus all the search parameters available in [Search Document](https://docs.microsoft.com/rest/api/searchservice/search-documents) operations.
     >
 
