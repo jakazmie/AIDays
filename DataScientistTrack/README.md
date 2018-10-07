@@ -16,12 +16,12 @@ You will use Azure Data Science Virtual Machine as your development environment 
 1. Follow the below link to provision Data Science Virtual Machine. 
    - Create a new resource group for your VM
    - Use **D8s_v3** as a VM type. Although, the labs will run on other configurations this is the minimum configuration we recommend. 
-   - SChoose *username and password* as the authentication type. 
+   - Shoose *username and password* as the authentication type. 
    - Use default values for all other parameters.
 
  https://portal.azure.com/#create/microsoft-dsvm.linux-data-science-vm-ubuntulinuxdsvmubuntu
 
-2. When your VM is ready use Azure Portal Cloud Shell to and set it up for the labs
+2. When your VM is ready use Azure Portal Cloud Shell to configure it up for the labs
 
 ```
 # Logon to your VM
