@@ -12,9 +12,10 @@ The lab is designed to be instructor guided.  In addition to walking you through
 Don't hesitate to ask questions !
 
 ## What will you learn during the lab?
-The lab consists of 2 parts:
-- In the first part you will learn how to train, evaluate, fine tune, and invoke a custom image classification model.
-- In the the second part, you will export your model as a docker image so it can be deployed into an arbitrary inference environment
+The lab consists of 3 parts:
+- In the first part we will train, evaluate and fine tune a custom image classification model.
+- In the second part, we will Custom Vision Python SDK to invoke the model using the Custom Vision Service's prediction endpoint. 
+- In the third part, we will export the  model as a docker image and deploy it to Azure Container Instance.
 
 
 ## Scenario
