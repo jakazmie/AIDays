@@ -7,14 +7,11 @@ In this step, you will learn how to access the REST prediction endpoint that was
 ![Mark iteration](images/img12.PNG)
 
 
-2. Navigate to the Azure Notebooks library you created during the lab environment setup.
+2. Connect to Jupyter server on your Data Science Virtual Machine
+https://<VM IP address>:8000
+  You may receive a warning that your connection is not private. Ignore it and press **ADVANCE** to proceed.
 
-3. Add a new Item from URL. Use the below link to import `predict.ipynb` from the lab's github repo
+3. Start the `predict.ipynb` notebook located in `AIDays/DeveloperTrack/01-CustomVisionService`
 
-https://raw.githubusercontent.com/jakazmie/AIDays/master/IntelligentApps/01-CustomVisionService-ImageClassification/predict.ipynb
-
-
-4. Start the notebook and follow the instructor
-
-After you have completed the walkthroug of `predict.ipynb` procedd to the [next step](export.md)
+3. After you have completed the walkthroug of `predict.ipynb` procedd to the [next step](export.md)
 
