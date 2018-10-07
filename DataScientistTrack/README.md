@@ -61,6 +61,6 @@ This lab walks you through building a custom image classification model using Tr
 
 
 ## 02-AML-EndToEndWalkthrough
-This lab demonstrates how to orchestrate an end-to-end machine learning workflow using Azure Machine Learning service. During the lab you will develop, fine-tune, and operationalize a custom image classification model using Transfer Learning and Tens
+This lab demonstrates how to orchestrate an end-to-end machine learning workflow using Azure Machine Learning service. During the lab you will develop, fine-tune, and operationalize a custom image classification model using Transfer Learning and TensorFlow. 
 
 
