@@ -6,10 +6,12 @@ that the instructor will walk participants through the lab, deep dive into the c
 
 ## Pre-requisties
 
-You will use Azure Data Science Virtual Machine as your development environment for Azure ML service labs. You will use Azure Databricks workspace for Azure Databricks labs.
+You will use Azure Data Science Virtual Machine as your development environment for Azure ML service labs. You will use Azure Databricks workspace for Azure Databricks labs. To set up the prequisties you need:
+- An Azure subscription with enough credits - TBD
+- Chrome browser
+
 
 ### To set up Azure Data Science Virtual Machine
-## To set up Azure Data Science Virtual Machine
 
 1. Follow the below link to provision Data Science Virtual Machine. 
    - Create a new resource group for your VM
