@@ -34,45 +34,12 @@ ssh <your username>@<vm ip address>
 cd notebooks
 git clone https://github.com/jakazmie/AIDays.git
 
-# Enable AML widgets. This is to address the bug in DSVM default configuration
-source activate py36
-jupyter nbextension enable --py --user azureml.train.widgets
-
-# Install modules required by the lab which are missing from the default configuration
-pip install h5py
-
-# logout from VM
 exit
 ```
 
 
-3. Use Chrome browser to connect to Jupyter Hub at http://<your machine's IP address>:8000. You may receive a warning that `Your connection is not private`. Ignore it and press on **ADVANCED** to proceed.
-
-3. Use your username and password to log in to Jupyter
-
-4. This step is a temporary walk-around to address issues with AML Widgets on Azure Data Science Machine
-```
-# Log back to your DSVM
-ssh <your username>@<vm ip address>
-
-# Enable AML widgets. This is to address the bug in DSVM default configuration
-source activate py36
-jupyter nbextension enable --py --user azureml.train.widgets
-```
-
-5. You are ready to start the labs
+3. Your DSVM is ready.
 
 **Important**. Make sure to set the kernel of each notebook in the lab to *Python 3.6 - AzureML*.
 
 
-
-
-# The labs:
-
-
-## 01-AzureDatabricks-DeepLearningPipelines
-This lab walks you through building a custom image classification model using Transfer Learning and Azure Databricks Deep Learning Pipelines
-
-
-## 02-AML-EndToEndWalkthrough
-This lab demonstrates how to orchestrate an end-to-end machine learning workflow using Azure Machine Learning service. During the lab you will develop, fine-tune, and operationalize a custom image classification model using Transfer Learning and TensorFlow. 
