@@ -53,14 +53,14 @@ https://customvision.ai
 ![new project](images/newproject.png)
 
   
-5. Fill the form to create a resource group that will host Custom Vision Service resources. Use your Azure subscription. a
+5. Fill the form to create a resource group that will host Custom Vision Service resources. Use your Azure subscription.
 
 ![new resource group](images/rg.png)
 
 
 Congratulations! Your Custom Vision Service project is ready
 
-### Provision and configure Azure Notebooks
+### Provision Data Science Virtual Machine
 
 1. Navigate to
 
