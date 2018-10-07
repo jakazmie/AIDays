@@ -11,7 +11,9 @@ In this step, you will learn how to access the REST prediction endpoint that was
 https://<VM IP address>:8000
   You may receive a warning that your connection is not private. Ignore it and press **ADVANCE** to proceed.
 
-3. Start the `predict.ipynb` notebook located in `AIDays/DeveloperTrack/01-CustomVisionService`
+3. Start the `predict.ipynb` notebook located in `AIDays/DeveloperTrack/01-CustomVisionService`.
 
-3. After you have completed the walkthroug of `predict.ipynb` procedd to the [next step](export.md)
+4. Follow the instructor who will walk you through the notebook.
+
+5. After you have completed the walkthroug of `predict.ipynb` procedd to the [next step](export.md)
 
