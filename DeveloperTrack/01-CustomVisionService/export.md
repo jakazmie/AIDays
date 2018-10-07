@@ -25,6 +25,8 @@ To convert the domain of an existing classifier, use the following steps:
 ![Set compact domain](images/img14.PNG)
 4. Retrain the model using the compact domain
 
+5. Make this iteration the default.
+
 
 
 ## Export the model to a docker image
