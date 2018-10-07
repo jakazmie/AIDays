@@ -49,6 +49,8 @@ exit
 
 4. You are ready to start the labs
 
+**Important**. Make sure to set the kernel of each notebook *Python 3.6 - AzureML*.
+
 
 
 
