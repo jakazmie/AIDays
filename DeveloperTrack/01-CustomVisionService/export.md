@@ -32,6 +32,9 @@ To convert the domain of an existing classifier, use the following steps:
 ## Export the model to a docker image
 To export the model after retraining, use the following steps:
 1. Go to the Performance tab and select Export.
+
+![Export](images/export.png)
+
 2. Select the export format (Docker), and then select Export to download the model.
 3. Extract the downloaded `zip` file to the folder of your choice
 
