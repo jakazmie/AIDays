@@ -73,7 +73,7 @@ You can use many strategies to improve performance of your model. Your instructo
 
 In the following steps you will apply two approaches. First you will review your training data looking for potentially mislabeled instances. Second, you will add more samples of the class for which the classifier did not perform well. 
 
-Recall that the images tagged as *Developed* had the lowest **Precision** metrics. As such we will focus on improving the performace of our classifier on this class first.
+Recall that the images tagged as *Developed* had the lowest performance metrics. As such we will focus on improving the performace of our classifier on this class.
 
 1. Browse through the images labeled as *Developed*. You will notice some images with questionable tagging.
 
