@@ -4,7 +4,50 @@ This folder contains hands-on labs that demonstrate how to develop and operation
 that the instructor will walk participants through the lab, deep dive into the code, and answer any arising questions. The labs are independent and self-contained and can be executed in arbitrary combinations. 
 
 
-# Pre-requisties
+## Pre-requisties
+
+You will use Azure Data Science Virtual Machine as your development environment for Azure ML service labs. You will use Azure Databricks workspace for Azure Databricks labs.
+
+### To set up Azure Data Science Virtual Machine
+## To set up Azure Data Science Virtual Machine
+
+1. Follow the below link to provision Data Science Virtual Machine. 
+   - Create a new resource group for your VM
+   - Use **D8s_v3** as a VM type. Although, the labs will run on other configurations this is the minimum configuration we recommend. 
+   - SChoose *username and password* as the authentication type. 
+   - Use default values for all other parameters.
+
+ https://portal.azure.com/#create/microsoft-dsvm.linux-data-science-vm-ubuntulinuxdsvmubuntu
+
+2. When your VM is ready use Azure Portal Cloud Shell to and set it up for the labs
+
+```
+# Logon to your VM
+ssh <your username>@<vm ip address>
+
+# Clone the labs in the notebooks folder
+cd notebooks
+git clone https://github.com/jakazmie/TensorFlowOnAzure.git
+
+# Enable AML widgets. This is to address the bug in DSVM default configuration
+source activate py36
+jupyter nbextension enable --py --user azureml.train.widgets
+
+# Install modules required by the lab which are missing from the default configuration
+pip install pillow
+pip install h5py
+
+# logout from VM
+exit
+```
+
+
+3. Use Chrome browser to connect to Jupyter Hub at http://<your machine's IP address>:8000. You may receive a warning that `Your connection is not private`. Ignore it and press on **ADVANCED** to proceed.
+
+3. Use your username and password to log in to Jupyter
+
+4. You are ready to start the labs
+
 
 
 
