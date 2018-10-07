@@ -29,14 +29,13 @@ ssh <your username>@<vm ip address>
 
 # Clone the labs in the notebooks folder
 cd notebooks
-git clone https://github.com/jakazmie/TensorFlowOnAzure.git
+git clone https://github.com/jakazmie/AIDays.git
 
 # Enable AML widgets. This is to address the bug in DSVM default configuration
 source activate py36
 jupyter nbextension enable --py --user azureml.train.widgets
 
 # Install modules required by the lab which are missing from the default configuration
-pip install pillow
 pip install h5py
 
 # logout from VM
