@@ -57,10 +57,10 @@ exit
 
 
 ## 01-AzureDatabricks-DeepLearningPipelines
-This lab walks you through building a custom image classification model using Transfer Learning and Azure Databricks Deepl Learning Pipelines
+This lab walks you through building a custom image classification model using Transfer Learning and Azure Databricks Deep Learning Pipelines
 
 
-## 11-AMLWalkthrough
-This lab is an end-to-end walkthrough of Azure Machine Learning service.
+## 02-AML-EndToEndWalkthrough
+This lab demonstrates how to orchestrate an end-to-end machine learning workflow using Azure Machine Learning service. During the lab you will develop, fine-tune, and operationalize a custom image classification model using Transfer Learning and Tens
 
 
