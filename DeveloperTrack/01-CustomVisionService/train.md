@@ -4,7 +4,7 @@ In this part of the lab we will train, evaluate, and fine tune a custom image cl
 
 ## Create Custom Vision Service project
 
-The first step is to create the Custom Vision Service project.
+The first step is to create the Custom Vision Service project.The project is a container for model development artifacts, including training data, model iterations, history of training runs, etc. 
 
 1. Navigate to Custom Vision Service web portal
 
