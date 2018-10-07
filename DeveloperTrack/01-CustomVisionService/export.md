@@ -20,10 +20,10 @@ To convert the domain of an existing classifier, use the following steps:
 
 1. From the Custom vision page, select the Home icon to view a list of your projects. You can also use the https://customvision.ai/projects to see your projects.
 2. Select your project, and then select the Gear icon in the upper right of the page.
-3. In the **Domains** section, select a compact domain. **Save Changes** to save the changes.
+3. In the **Domains** section, select the `General (compact)` domain. **Save Changes** to save the changes.
 
 ![Set compact domain](images/img14.PNG)
-4. Retrain the model using a compact domain
+4. Retrain the model using the compact domain
 
 
 
