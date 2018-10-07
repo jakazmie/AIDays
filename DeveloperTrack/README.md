@@ -37,9 +37,3 @@ git clone https://github.com/jakazmie/AIDays.git
 exit
 ```
 
-
-3. Your DSVM is ready.
-
-**Important**. Make sure to set the kernel of each notebook in the lab to *Python 3.6 - AzureML*.
-
-
