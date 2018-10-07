@@ -29,7 +29,7 @@ https://customvision.ai
 ## Prepare training data
 Download and unzip training data to your local drive.
 
-https://azureailabs.blob.core.windows.net/aerial/aerial.zip
+https://azureailabs.blob.core.windows.net/aerialsamples/aerial.zip
 
 
 ## Upload and tag training images
