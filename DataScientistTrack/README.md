@@ -47,7 +47,17 @@ exit
 
 3. Use your username and password to log in to Jupyter
 
-4. You are ready to start the labs
+4. This step is a temporary walk-around to address issues with AML Widgets on Azure Data Science Machine
+```
+# Log back to your DSVM
+ssh <your username>@<vm ip address>
+
+# Enable AML widgets. This is to address the bug in DSVM default configuration
+source activate py36
+jupyter nbextension enable --py --user azureml.train.widgets
+```
+
+5. You are ready to start the labs
 
 **Important**. Make sure to set the kernel of each notebook in the lab to *Python 3.6 - AzureML*.
 
