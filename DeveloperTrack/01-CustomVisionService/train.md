@@ -1,5 +1,29 @@
 # Model training 
-In this step you will train, evaluate, and fine tune a custom image classification model using Custom Vision Service web interface. Note that it is also possible to script the modeling workflow using Custom Vision Service SDK. 
+In this part of the lab you will train, evaluate, and fine tune a custom image classification model using Custom Vision Service web interface. Note that it is also possible to script the modeling workflow using Custom Vision Service SDK. 
+
+## Create Custom Vision Service project
+
+The first step is to create the Custom Vision Service project.
+
+1. Navigate to Custom Vision Service web portal
+
+https://customvision.ai
+
+2. Sign in with you Azure account
+
+3. On the Custom Vision Service's home page click on **NEW PROJECT**
+
+![Custom vision](images/projects.png)
+
+4. In the **NEW PROJECT** dialog box select *Classification* for the project type, *Multiclass* for the classification type, and *General* for the domain type. Then click on **create new** *Resource Group*
+
+![new project](images/newproject.png)
+
+  
+5. Fill the form to create a resource group that will host Custom Vision Service resources. Use your Azure subscription.
+
+![new resource group](images/rg.png)
+
 
 ## Prepare training data
 Download and unzip training data to your local drive.
