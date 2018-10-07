@@ -25,14 +25,14 @@ Developed | Cultivated | Barren
 --------- | ------ | ----------
 ![Developed](images/developed1.png) | ![Cultivated](images/cultivated1.png) | ![Barren](images/barren1.png)
 
-## Pre-requisities
-- An Azure subscription
-- Internet browser - preferably Chrome
+
+Let's start
+
+[Next step](train.md)
 
 
-## Lab environment
 
-During the lab you will use Microsoft Cognitive Services Custom Vision Services web interface, Custom Vision Service Python SDK and Azure Data Science Virtual Machine.
+
 
 ### Provision and configure Custom Vision Service
 
@@ -79,10 +79,6 @@ https://notebooks.azure.com
 
 
 Your environment is ready.
-
-[Next step](train.md)
-
-
 
 
 
