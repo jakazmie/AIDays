@@ -57,6 +57,7 @@ https://customvision.ai/projects
 
 2. After training is completed you will see the screen with the evaluation metrics. Your instructor will explain how to interpret the metrics.
 
+
 ![Evaluate](images/img7.PNG)
 
 
