@@ -100,4 +100,4 @@ CTRL-F can also help you determine how many documents are in a given result set.
 ![skillset](images/9-search-explorer.png)
 
 ---
-[04. Integrate Search into your Web App](https://github.com/jakazmie/AIDays/blob/master/KnowledgeMining/04IntegrateintoApp.md)
+[04. Integrate Search into your Web App](04IntegrateintoApp.md)

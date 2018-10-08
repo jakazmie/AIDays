@@ -218,4 +218,4 @@ facet=Copyright&facet=Style&$filter=Style eq 'Unisex'
 ---
 Ref: https://docs.microsoft.com/en-us/azure/search/search-get-started-portal
 
-[Next](https://github.com/jakazmie/AIDays/blob/master/KnowledgeMining/03CreateIndexerBlob.md)
+[03. Create Indexer for Unstructured Data](03CreateIndexerBlob.md)
