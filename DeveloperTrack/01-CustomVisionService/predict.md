@@ -7,8 +7,10 @@ In this step, you will learn how to access the REST prediction endpoint that was
 ![Mark iteration](images/img12.PNG)
 
 
-2. Connect to Jupyter server on your Data Science Virtual Machine
-https://<VM IP address>:8000
+2. Connect to Jupyter server on your Data Science Virtual Machine using the following URL:
+
+`https://<VM IP address>:8000`
+  
   You may receive a warning that your connection is not private. Ignore it and press **ADVANCE** to proceed.
 
 3. Start the `invoke_endpoint.ipynb` notebook located in `AIDays/DeveloperTrack/01-CustomVisionService`.
