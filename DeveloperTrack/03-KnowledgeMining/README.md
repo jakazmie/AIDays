@@ -17,7 +17,7 @@
 
 ## Overview Architecture of this Lab
 
-## [00. Run a Script to create the environment](https://github.com/jakazmie/AIDays/blob/master/KnowledgeMining/00CreateLabEnv.md)
+## [00. Run a Script to create the environment](00CreateLabEnv.md)
 
 The script will create Azure Services includes DSVM, Blob SQL DB and also copy some sample data into your blob
 

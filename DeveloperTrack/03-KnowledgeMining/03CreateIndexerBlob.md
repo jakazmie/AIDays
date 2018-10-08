@@ -29,14 +29,6 @@ A Free service is limited to 3 indexes, 16 MB maximum blob size, and 2 minutes o
 
 ![create service](images/2-create-search-service.png)
 
-## Set up Azure Blob service and load sample data ##
-The enrichment pipeline pulls from Azure data sources supported by Azure Search indexers. For this exercise, we use blob storage to showcase multiple content types.
-1.	Download sample data consisting of a small file set of different types.
-2.	Sign up for Azure Blob storage, create a storage account, sign in to Storage Explorer, and create a container. See Azure Storage Explorer Quickstart for instructions on all the steps.
-3.	Using the Azure Storage Explorer, in the container you created, click Upload to upload the sample files.
-
-![create service](images/3-sample-data.png)
-
 ## Create the enrichment pipeline ##
 Go back to the Azure Search service dashboard page and click Import data on the command bar to set up enrichment in four steps.
 

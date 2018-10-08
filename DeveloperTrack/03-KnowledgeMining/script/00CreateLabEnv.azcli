@@ -1,0 +1,78 @@
+#!/bin/bash
+
+# Select Azure subscription
+az account list --output table
+
+echo "\n\r"
+
+read -p "Subscription Name for lab>>" subName
+
+if [ ! -z "$subName" ]; then
+    echo "You select " $subName " for the lab."
+    az account set --subscription "$subName" --verbose
+else
+    echo "Please run the script again!! EXIT"
+    exit
+fi
+
+chkName=$(az account list --output tsv --query "[?isDefault].name")
+
+if [ "$subName" = "$chkName" ]; then
+    echo "Subscripion Name has confirmed"
+else 
+    echo "Please try again with correct subscription name"
+    exit
+fi
+
+# Make a resource group name
+# if you have exsiting one please use the one
+num=$(shuf -i0-1000 -n1)
+rgName=azhol-$num-rg
+# set azure region
+loc=southcentralus
+# set blob name that should be unique 
+blobName=blobdev$num # It will be saved it in parameter file
+# set container name that will be created in Blob
+containerName=unstructured
+
+# Create the Resource Group
+# if you have exsiting one you can skip this part
+echo "1. Create Resource Group " $rgName
+az group create --name $rgName --location $loc
+
+# Storage Account
+# Create the Storage Account
+echo "2. Create Blob " $blobName
+az storage account create --name $blobName --resource-group $rgName --sku Standard_LRS --location $loc --kind StorageV2
+
+# Get blob connection string 
+blobConn=$(az storage account show-connection-string --name $blobName --resource-group $rgName --output tsv)
+
+# Create a container
+echo "3. Create container in the blob" 
+az storage container create --name $containerName --connection-string $blobConn
+
+# Create a DB and restore Database from backup
+echo "4. Download a sample ZIP file"
+file_to_upload="./SampleFilesCognitiveSearch.zip"
+# wget is tool you can download files
+# Cloud Shell has wget.exe on both Bash or Powershell 
+wget -O $file_to_upload https://github.com/jakazmie/AIDays/raw/master/DeveloperTrack/03-KnowledgeMining/SampleFilesCognitiveSearch.zip 
+
+unzip ./SampleFilesCognitiveSearch.zip -d ./contents/
+
+cd ./contents
+
+# Uploading files
+echo "Upload sample objects to blob"
+for filename in *; do
+  az storage blob upload --container-name $containerName --file "$filename" --name "$filename" --connection-string $blobConn
+done
+
+cd ..
+
+rm ./contents -r
+rm ./SampleFilesCognitiveSearch.zip
+
+# Confirm file is uploaded 
+az storage blob list --container-name $containerName --connection-string $blobConn

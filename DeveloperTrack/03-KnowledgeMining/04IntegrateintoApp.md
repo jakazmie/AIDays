@@ -2,7 +2,10 @@
 
 ### 04.01. Access to Azure Notebooks
 
-Go to [Azure Notebooks](https://notebooks.azure.com) and login
+Go to your Notebook service runing on your Data Science Virtual Machine
+
+> If you don't have Notebook service running you can
+> go to [Azure Notebooks](https://notebooks.azure.com) for the rest of the lab
 
 Click _'+ New Library'_ and create a new notebook
 
