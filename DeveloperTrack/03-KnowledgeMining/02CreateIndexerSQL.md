@@ -210,11 +210,6 @@ Using the **Search explorer** in the Azure portal, you learned some basic query 
 
 You also learned how to use the tiles in the portal dashboard for the search index, indexer, and  data sources. Given any new data source in the future, you can use the portal to quickly check its definitions or field collections with minimal effort.
 
-
-```
-facet=Copyright&facet=Style&$filter=Style eq 'Unisex'
-```
-
 ---
 Ref: https://docs.microsoft.com/en-us/azure/search/search-get-started-portal
 
