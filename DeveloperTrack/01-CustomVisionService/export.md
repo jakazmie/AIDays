@@ -23,9 +23,10 @@ To convert the domain of an existing classifier, use the following steps:
 3. In the **Domains** section, select the `General (compact)` domain. **Save Changes** to save the changes.
 
 ![Set compact domain](images/img14.PNG)
-4. Retrain the model using the compact domain
 
-5. Make this iteration the default.
+4. Retrain the model using the `General (compact)` domain
+
+5. Make this iteration the default iteration.
 
 
 
@@ -34,10 +35,11 @@ You can use CVS web interface or REST API to export the model. To export the mod
 
 1. Go to the Performance tab and select Export.
 
-![Export](images/export.png)
+![Export](images/export_to_docker.png)
 
-2. You can now select the format and download the export package to your workstation.
-3. In this lab we will use the API. To continue go back to Jupyter on your DSVM and start `export.ipynb` notebook.
+2. You could now select the format and download the export package to your workstation.
+
+3. In this lab we will use the REST API to export the model. To continue the lab, go back to Jupyter on your DSVM and start  the `export_to_docker.ipynb` notebook.
 
 
  
