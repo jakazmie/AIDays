@@ -20,7 +20,7 @@ https://portal.azure.com/#create/microsoft-dsvm.linux-data-science-vm-ubuntulinu
 Create the VM with the following configuration: 
    - Create a new resource group for your VM
    - Use **D8s_v3** as a VM type. Although, the labs will run on other configurations this is the minimum configuration we recommend. 
-   - Shoose *username and password* as the authentication type. 
+   - Choose *username and password* as the authentication type. 
    - Use default values for all other parameters.
 
 
