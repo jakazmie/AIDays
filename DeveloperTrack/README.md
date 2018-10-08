@@ -24,7 +24,7 @@ Create the VM with the following configuration:
    - Use default values for all other parameters.
 
 
-2. When your VM is ready use Azure Portal Cloud Shell to configure it up for the labs
+2. When your VM is ready use Azure Portal Cloud Shell to clone the lab files and install pre-requisities.
 
 ```
 # Logon to your VM
