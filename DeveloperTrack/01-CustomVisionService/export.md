@@ -37,8 +37,9 @@ You can use CVS web interface or REST API to export the model. To export the mod
 
 ![Export](images/export.png)
 
-2. You can now select the format and download the export package to your workstation.
-3. In this lab we will use the API. To continue go back to Jupyter on your DSVM and start `export.ipynb` notebook.
+2. You could now select the format and download the export package to your workstation.
+
+3. In this lab we will use the REST API. To continue the lab, go back to Jupyter on your DSVM and start `export.ipynb` notebook.
 
 
  
