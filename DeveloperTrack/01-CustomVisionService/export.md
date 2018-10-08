@@ -20,18 +20,24 @@ To convert the domain of an existing classifier, use the following steps:
 
 1. From the Custom vision page, select the Home icon to view a list of your projects. You can also use the https://customvision.ai/projects to see your projects.
 2. Select your project, and then select the Gear icon in the upper right of the page.
-3. In the **Domains** section, select a compact domain. **Save Changes** to save the changes.
+3. In the **Domains** section, select the `General (compact)` domain. **Save Changes** to save the changes.
 
 ![Set compact domain](images/img14.PNG)
-4. Retrain the model using a compact domain
+4. Retrain the model using the compact domain
+
+5. Make this iteration the default.
 
 
 
 ## Export the model to a docker image
-To export the model after retraining, use the following steps:
-1. Go to the Performance tab and select Export.
-2. Select the export format (Docker), and then select Export to download the model.
-3. Extract the downloaded `zip` file to the folder of your choice
+You can use CVS web interface or REST API to export the model. To export the model through the web interface.
 
-The instructor will walk you through the content of the download.
+1. Go to the Performance tab and select Export.
+
+![Export](images/export.png)
+
+2. You can now select the format and download the export package to your workstation.
+3. In this lab we will use the API. To continue go back to Jupyter on your DSVM and start `export.ipynb` notebook.
+
+
  
