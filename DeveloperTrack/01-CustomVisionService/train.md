@@ -37,7 +37,7 @@ https://azureailabs.blob.core.windows.net/aerialsamples/aerial.zip
 
 https://customvision.ai/projects
 
-2. Click on the project you created in the lab set up step.
+2. Click on the project you created in the previous steps.
 
 ![Select the project](images/img4.PNG)
 
