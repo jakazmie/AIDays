@@ -17,5 +17,5 @@ In this step, you will learn how to access the REST prediction endpoint that was
 
 4. Follow the instructor who will walk you through the notebook.
 
-5. After you have completed the walkthroug the notebook  procedd to the [next step](export.md)
+5. After you have completed all steps in the notebook procedd to the [next step](export.md)
 
