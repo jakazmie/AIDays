@@ -4,6 +4,7 @@
 *.tfrecords
 *.gz
 *.tar
+*.zip
 aerialimages/
 aerialsmall/
 aerialmed/
@@ -11,5 +12,6 @@ aeriallarge/
 aerialtiny/
 aml_config/
 outputs/
+docker_export/
 
 
