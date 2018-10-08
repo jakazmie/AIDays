@@ -41,13 +41,11 @@ The script will create Azure Services includes DSVM, Blob SQL DB and also copy s
 
 03.04. Run Indexer
 
-## [04. Integrate Search into your Web App](04IntegrationintoApp.md)
+## [04. Integrate Search into your Web App](04IntegrateintonApp.md)
 
-04.01. Download sample source code
+04.01. Import Notebook
 
-04.02. Open the soltuion from Visual Studio
-
-04.03. Update codes and Run
+04.02. Update codes and Run Sample
 
 ## [05. Clean up](05Cleanup.md)
 
