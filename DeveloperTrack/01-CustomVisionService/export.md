@@ -23,9 +23,10 @@ To convert the domain of an existing classifier, use the following steps:
 3. In the **Domains** section, select the `General (compact)` domain. **Save Changes** to save the changes.
 
 ![Set compact domain](images/img14.PNG)
+
 4. Retrain the model using the compact domain
 
-5. Make this iteration the default.
+5. Make this iteration the default iteration.
 
 
 
