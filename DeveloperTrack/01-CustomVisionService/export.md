@@ -35,7 +35,7 @@ You can use CVS web interface or REST API to export the model. To export the mod
 
 1. Go to the Performance tab and select Export.
 
-![Export](images/export.png)
+![Export](images/export_to_docker.png)
 
 2. You could now select the format and download the export package to your workstation.
 
