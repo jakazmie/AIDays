@@ -39,7 +39,7 @@ You can use CVS web interface or REST API to export the model. To export the mod
 
 2. You could now select the format and download the export package to your workstation.
 
-3. In this lab we will use the REST API. To continue the lab, go back to Jupyter on your DSVM and start `export_to_docker.ipynb` notebook.
+3. In this lab we will use the REST API to export the model. To continue the lab, go back to Jupyter on your DSVM and start  the `export_to_docker.ipynb` notebook.
 
 
  
