@@ -13,7 +13,7 @@ To complete the labs you will need:
 
 ### To set up Azure Data Science Virtual Machine
 
-1.To provision DSVM navigate to 
+1. Navigate to 
 
 https://portal.azure.com/#create/microsoft-dsvm.linux-data-science-vm-ubuntulinuxdsvmubuntu 
 
