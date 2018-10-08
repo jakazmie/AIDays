@@ -13,11 +13,11 @@ To complete the labs you will need:
 
 ### To set up Azure Data Science Virtual Machine
 
-1. Navigate to 
+1.To provision DSVM navigate to 
 
 https://portal.azure.com/#create/microsoft-dsvm.linux-data-science-vm-ubuntulinuxdsvmubuntu 
 
-to start provisioning. Create the VM with the following configuration: 
+Create the VM with the following configuration: 
    - Create a new resource group for your VM
    - Use **D8s_v3** as a VM type. Although, the labs will run on other configurations this is the minimum configuration we recommend. 
    - Shoose *username and password* as the authentication type. 
