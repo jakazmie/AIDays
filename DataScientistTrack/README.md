@@ -43,12 +43,12 @@ exit
 ```
 # Log back to your DSVM
 ssh <your username>@<vm ip address>
+source activate py36
 
 # Install modules required by the lab which are missing from the default configuration
 pip install h5py
 
 # Enable AML widgets. This is to address the bug in DSVM default configuration
-source activate py36
 jupyter nbextension enable --py --user azureml.train.widgets
 ```
 
