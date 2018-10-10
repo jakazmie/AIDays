@@ -123,6 +123,7 @@ def train_evaluate(run):
     print("Training completed.")
     os.makedirs('outputs', exist_ok=True)
     model_file = os.path.join('outputs', run.run_id + '.hd5')
+    #model_file = os.path.join('outputs', FLAGS.run_id + '.hd5')
     print("Saving model to: {0}".format(model_file))
     model.save(model_file)
     
