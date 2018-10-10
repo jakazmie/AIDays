@@ -35,7 +35,7 @@ git clone https://github.com/jakazmie/AIDays.git
 exit
 ```
 
-3. Use Chrome browser to connect to Jupyter Hub at http://<your machine's IP address>:8000. You may receive a warning that `Your connection is not private`. Ignore it and press on **ADVANCED** to proceed.
+3. Use Chrome browser to connect to Jupyter Hub at `http://<your machine's IP address>:8000`. You may receive a warning that `Your connection is not private`. Ignore it and press on **ADVANCED** to proceed.
 
 3. Use your username and password to log in to Jupyter
 
