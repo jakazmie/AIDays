@@ -4,29 +4,6 @@
 
 For a quick review and ramp up on Azure Search concepts, you can use the built-in tools provided in the Azure Search service page in the Azure portal. These tools may not offer the full functionality of the .NET and REST APIs. But the wizards and editors offer a code-free introduction to Azure Search, enabling you to write interesting queries against a sample data set right away.
 
-> * Start with public sample data and auto-generate an Azure Search index using the **Import data** wizard.
-> * View index schema and attributes for any index published to Azure Search.
-> * Explore full text search, filters, facets, fuzzy search, and geosearch with **Search explorer**.  
-
-## Prerequisites
-
-[Create an Azure Search service](search-create-service-portal.md) or find an existing service under your current subscription.
-
-1. Sign in to the [Azure portal](https://portal.azure.com).
-2. Open the service dashboard of your Azure Search service. If you didn't pin the service tile to your dashboard, you can find your service this way:
-
-   * In the Jumpbar, click **All services** on the left navigation pane.
-   * In the search box, type *search* to get a list of search-related services for your subscription. Click **Search services**. Your service should appear in the list.
-
-### Check for space
-
-Many customers start with the free service. This version is limited to three indexes, three data sources, and three indexers. Make sure you have room for extra items before you begin. This tutorial creates one of each object.
-
-> Tiles on the service dashboard show how many indexes, indexers, and data sources you already have. The Indexer tile shows success and failure indicators. Click the tile to view the indexer count.
->
-> ![Tiles for indexers and datasources](./media/search-get-started-portal/tiles-indexers-datasources2.png)
->
-
 ## <a name="create-index"></a> Create an index and load data
 
 Search queries iterate over an [*index*](search-what-is-an-index.md) that contains searchable data, metadata, and additional constructs that optimize certain search behaviors.
@@ -45,7 +22,7 @@ For this tutorial, we use a built-in sample dataset that can be crawled using an
 
 3. Click **OK** to use it.
 
-### Skip Cognitive skills
+### __Skip__ Cognitive skills
 
 **Import data** provides an optional cognitive skills step that enables you to add custom AI algorithms to indexing. Skip this step for now, and move on to **Customize target index**.
 
@@ -114,15 +91,21 @@ Moving forward, you should now have a search index that's ready to query using t
 
 ### Simple query with top N results
 
-#### Example (string): `search=seattle`
+#### Example (string): 
 
+```
+search=seattle
+```
 * The **search** parameter is used to input a keyword search for full text search, in this case, returning listings in King County, Washington state, containing *Seattle* in any searchable field in the document.
 
 * **Search explorer** returns results in JSON, which is verbose and hard to read if documents have a dense structure. This is intentional; visibility of the entire document is important for development purposes, especially during testing. For a better user experience, you will need to write code that [handles search results](search-pagination-page-layout.md) to bring out important elements.
 
 * Documents are composed of all fields marked as "retrievable" in the index. To view index attributes in the portal, click *realestate-us-sample* in the **Indexes** tile.
 
-#### Example (parameterized): `search=seattle&$count=true&$top=100`
+#### Example (parameterized): 
+```
+search=seattle&$count=true&$top=100
+```
 
 * The **&** symbol is used to append search parameters, which can be specified in any order.
 
@@ -134,7 +117,10 @@ Moving forward, you should now have a search index that's ready to query using t
 
 Filters are included in search requests when you append the **$filter** parameter. 
 
-#### Example (filtered): `search=seattle&$filter=beds gt 3`
+#### Example (filtered): 
+```
+search=seattle&$filter=beds gt 3
+```
 
 * The **$filter** parameter returns results matching the criteria you provided. In this case, bedrooms greater than 3.
 
@@ -144,7 +130,10 @@ Filters are included in search requests when you append the **$filter** paramete
 
 Facet filters are included in search requests. You can use the facet parameter to return an aggregated count of documents that match a facet value you provide.
 
-#### Example (faceted with scope reduction): `search=*&facet=city&$top=2`
+#### Example (faceted with scope reduction): 
+```
+search=*&facet=city&$top=2
+```
 
 * **search=*** is an empty search. Empty searches search over everything. One reason for submitting an empty query is to  filter or facet over the complete set of documents. For example, you want a faceting navigation structure to consist of all cities in the index.
 
@@ -152,7 +141,11 @@ Facet filters are included in search requests. You can use the facet parameter t
 
 * **$top=2** brings back two documents, illustrating that you can use `top` to both reduce or increase results.
 
-#### Example (facet on numeric values): `search=seattle&facet=beds`**
+#### Example (facet on numeric values): 
+
+```
+search=seattle&facet=beds
+```
 
 * This query is facet for beds, on a text search for *Seattle*. The term *beds* can be specified as a facet because the field is marked as retrievable, filterable, and facetable in the index, and the values it contains (numeric, 1 through 5), are suitable for categorizing listings into groups (listings with 3 bedrooms, 4 bedrooms).
 
@@ -162,11 +155,19 @@ Facet filters are included in search requests. You can use the facet parameter t
 
 Hit highlighting refers to formatting on text matching the keyword, given matches are found in a specific field. If your search term is deeply buried in a description, you can add hit highlighting to make it easier to spot.
 
-#### Example (highlighter): `search=granite countertops&highlight=description`
+#### Example (highlighter): 
+
+```
+search=granite countertops&highlight=description
+```
 
 * In this example, the formatted phrase *granite countertops* is easier to spot in the description field.
 
-#### Example (linguistic analysis): `search=mice&highlight=description`
+#### Example (linguistic analysis): 
+
+```
+search=mice&highlight=description
+```
 
 * Full text search finds word forms with similar semantics. In this case, search results contain highlighted text for "mouse", for homes that have mouse infestation, in response to a keyword search on "mice". Different forms of the same word can appear in results because of linguistic analysis.
 
@@ -176,11 +177,17 @@ Hit highlighting refers to formatting on text matching the keyword, given matche
 
 By default, misspelled query terms, like *samamish* for the Samammish plateau in the Seattle area, fail to return matches in typical search. The following example returns no results.
 
-#### Example (misspelled term, unhandled): `search=samamish`
+#### Example (misspelled term, unhandled): 
+```
+search=samamish
+```
 
 To handle misspellings, you can use fuzzy search. Fuzzy search is enabled when you use the full Lucene query syntax, which occurs when you do two things: set **queryType=full** on the query, and append the **~** to the search string.
 
-#### Example (misspelled term, handled): `search=samamish~&queryType=full`
+#### Example (misspelled term, handled): 
+```
+search=samamish~&queryType=full
+```
 
 This example now returns documents that include matches on "Sammamish".
 
@@ -194,23 +201,16 @@ For more information about query scenarios enabled by the full query parser, see
 
 Geospatial search is supported through the [edm.GeographyPoint data type](https://docs.microsoft.com/rest/api/searchservice/supported-data-types) on a field containing coordinates. Geosearch is a type of filter, specified in [Filter OData syntax](https://docs.microsoft.com/rest/api/searchservice/odata-expression-syntax-for-azure-search).
 
-#### Example (geo-coordinate filters): `search=*&$count=true&$filter=geo.distance(location,geography'POINT(-122.121513 47.673988)') le 5`
+#### Example (geo-coordinate filters): 
+
+```
+search=*&$count=true&$filter=geo.distance(location,geography'POINT(-122.121513 47.673988)') le 5
+```
 
 The example query filters all results for positional data, where results are less than 5 kilometers from a given point (specified as latitude and longitude coordinates). By adding **$count**, you can see how many results are returned when you change either the distance or the coordinates.
 
 Geospatial search is useful if your search application has a "find near me" feature or uses map navigation. It is not full text search, however. If you have user requirements for searching on a city or country by name, add fields containing city or country names, in addition to coordinates.
 
-## Takeaways
-
-This tutorial provided a quick introduction to using Azure Search from the Azure portal.
-
-You learned how to create a search index using the **Import data** wizard. You learned about [indexers](search-indexer-overview.md), as well as the basic workflow for index design, including [supported modifications to a published index](https://docs.microsoft.com/rest/api/searchservice/update-index).
-
-Using the **Search explorer** in the Azure portal, you learned some basic query syntax through hands-on examples that demonstrated key capabilities such as filters, hit highlighting, fuzzy search, and geo-search.
-
-You also learned how to use the tiles in the portal dashboard for the search index, indexer, and  data sources. Given any new data source in the future, you can use the portal to quickly check its definitions or field collections with minimal effort.
-
 ---
-Ref: https://docs.microsoft.com/en-us/azure/search/search-get-started-portal
 
 [03. Create Indexer for Unstructured Data](03CreateIndexerBlob.md)
