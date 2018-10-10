@@ -5,6 +5,8 @@
 *.gz
 *.tar
 *.zip
+*.wav
+*.hd5
 aerialimages/
 aerialsmall/
 aerialmed/

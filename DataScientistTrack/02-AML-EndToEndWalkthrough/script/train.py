@@ -102,6 +102,7 @@ def train_evaluate(run):
                 include_top = False,
                 pooling = 'avg')
 
+    print("Generating bottleneck features")
     train_features = featurizer.predict_generator(train_generator, verbose=1)
     train_labels = train_generator.get_labels()
 
@@ -122,8 +123,7 @@ def train_evaluate(run):
     # Save the trained model to outp'uts which is a standard folder expected by AML
     print("Training completed.")
     os.makedirs('outputs', exist_ok=True)
-    model_file = os.path.join('outputs', run.run_id + '.hd5')
-    #model_file = os.path.join('outputs', FLAGS.run_id + '.hd5')
+    model_file = os.path.join(FLAGS.save_model_dir, 'model.hd5')
     print("Saving model to: {0}".format(model_file))
     model.save(model_file)
     
@@ -138,7 +138,6 @@ tf.app.flags.DEFINE_float('l1', 0.01, "Number of epochs to train")
 tf.app.flags.DEFINE_float('l2', 0.01, "Number of epochs to train")
 tf.app.flags.DEFINE_string('data_folder', 'aerialsmall', "Folder with training and validation images")
 tf.app.flags.DEFINE_string('save_model_dir', './outputs', "A folder for saving trained model")
-tf.app.flags.DEFINE_string('run_id', '999', 'Identifier of the run')
 
 
 def main(argv=None):
