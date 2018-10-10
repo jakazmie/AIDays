@@ -13,6 +13,6 @@ dependencies:
 - pip:
     # Required packages for AzureML execution, history, and data preparation.
   - azureml-defaults
+  - tensorflow
+  - h5py
   - pynacl==1.2.1
-- tensorflow
-- h5py

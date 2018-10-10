@@ -25,12 +25,10 @@ def init():
 def run(raw_data):
     # convert json to numpy array
     img = np.array(json.loads(raw_data)['data'])
-    # img = np.expand_dims(img, axis=0)
     # normalize as required by ResNet50
-    # img = resnet50.preprocess_input(img)
+    img = resnet50.preprocess_input(img)
     # extract bottleneck features
-    # features = featurizer.predict(img)
+    features = featurizer.predict(img)
     # make prediction
-    # predictions = model.predict(features)
-    predictions = img.shape
+    predictions = model.predict(features)
     return json.dumps(predictions.tolist())
