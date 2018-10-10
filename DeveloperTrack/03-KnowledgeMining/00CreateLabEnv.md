@@ -24,7 +24,7 @@ The script will create Azure Services includes DSVM, Blob SQL DB and also copy s
 
 
 	```bash
-	wget -O CreateLabEnv.azcli https://github.com/jakazmie/AIDays/blob/master/DeveloperTrack/03-KnowledgeMining/script/00CreateLabEnv.azcli
+	wget -O CreateLabEnv.azcli https://raw.githubusercontent.com/jakazmie/AIDays/master/DeveloperTrack/03-KnowledgeMining/script/00CreateLabEnv.azcli
 	```
 
 1. Run command to create a resource group and resource
