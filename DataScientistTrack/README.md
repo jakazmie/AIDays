@@ -35,7 +35,7 @@ git clone https://github.com/jakazmie/AIDays.git
 exit
 ```
 
-3. Use Chrome browser to connect to Jupyter Hub at http://<your machine's IP address>:8000. You may receive a warning that `Your connection is not private`. Ignore it and press on **ADVANCED** to proceed.
+3. Use Chrome browser to connect to Jupyter Hub at `http://<your machine's IP address>:8000`. You may receive a warning that `Your connection is not private`. Ignore it and press on **ADVANCED** to proceed.
 
 3. Use your username and password to log in to Jupyter
 
@@ -43,12 +43,12 @@ exit
 ```
 # Log back to your DSVM
 ssh <your username>@<vm ip address>
+source activate py36
 
 # Install modules required by the lab which are missing from the default configuration
 pip install h5py
 
 # Enable AML widgets. This is to address the bug in DSVM default configuration
-source activate py36
 jupyter nbextension enable --py --user azureml.train.widgets
 ```
 
