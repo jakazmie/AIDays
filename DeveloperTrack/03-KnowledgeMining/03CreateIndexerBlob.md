@@ -3,15 +3,18 @@
 ## Create the enrichment pipeline ##
 Go back to the Azure Search service dashboard page and click Import data on the command bar to set up enrichment in four steps.
 
-### Step 1: Create a data source ##
+## Step 1: Start the Import data wizard
 
+1. From the Azure Search service dashboard, click **Import data** on the command bar to start the wizard. This wizard helps you create and populate a search index.
+
+    ![Import data command](./media/search-get-started-portal/import-data-cmd2.png)
+
+2. In the wizard, click **Connect to your data** > **Azure Blob Storage**. This data source is preconfigured with a name, type, and connection information. Once created, it becomes an "existing data source" that can be reused in other import operations.
+
+    ![Select sample dataset](./images/select-blob.png)
 In Connect to your data > Azure Blob storage, select the account and container you created. Give the data source a name, and use default values for the rest.
 
-![blob storage](images/4-blob-datasource.png)
-
-Click OK to create the data source.
-
-One advantage of using the Import data wizard is that it can also create your index. As the data source is created, the wizard simultaneously constructs an index schema. It can take a few seconds to create the index.
+3. Click **OK** to use it.
 
 One advantage of using the Import data wizard is that it can also create your index. As the data source is created, the wizard simultaneously constructs an index schema. It can take a few seconds to create the index.
 
