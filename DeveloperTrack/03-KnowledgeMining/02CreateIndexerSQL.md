@@ -1,9 +1,5 @@
 # 02. Create Indexer for Structured Data
 
-## Tutorial: Use built-in tools for Azure Search indexing and queries
-
-For a quick review and ramp up on Azure Search concepts, you can use the built-in tools provided in the Azure Search service page in the Azure portal. These tools may not offer the full functionality of the .NET and REST APIs. But the wizards and editors offer a code-free introduction to Azure Search, enabling you to write interesting queries against a sample data set right away.
-
 ## <a name="create-index"></a> Create an index and load data
 
 Search queries iterate over an [*index*](search-what-is-an-index.md) that contains searchable data, metadata, and additional constructs that optimize certain search behaviors.
