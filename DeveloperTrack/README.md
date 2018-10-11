@@ -11,7 +11,7 @@ This folder contains hands-on labs that demonstrate how to develop intelligent a
 
 Follow the steps below to provision services that will be utilized during the labs:
 
-### Provision Cognitive Services
+### Set up Cognitive Services
 
 * Login to Azure Portal using credentials bound to your Azure subscription:
 http://portal.azure.com
@@ -56,7 +56,7 @@ https://ms.portal.azure.com/#blade/Microsoft_Azure_Marketplace/GalleryResultsLis
   * Choose **F0** Pricing tier
   * Choose the resource group you created for Custom Vision Services
   
-### Provision Azure Notebooks
+### Set up Azure Notebooks
 
 * Navigate to: https://notebooks.azure.com
 * Login to Azure Notebooks using credentials bound to your Azure subscription
@@ -65,6 +65,17 @@ https://ms.portal.azure.com/#blade/Microsoft_Azure_Marketplace/GalleryResultsLis
 * Enter **Library Name** - any name you want
 * Enter **Library ID** - any ID you want
 * Click on **Create**
+* After your Library is ready
+* Click on **+** icon
+* Click on **From URL**
+* In **File Url** paste the below link
+
+https://raw.githubusercontent.com/jakazmie/AIDays/master/DeveloperTrack/01-CustomVisionService/invoke_endpoint.ipynb
+
+* Repeat for
+
+https://raw.githubusercontent.com/jakazmie/AIDays/master/DeveloperTrack/02-TextAndSpeech/cognitive-services-text-speech.ipynb
+
 
 
 You are now ready to proceed to labs. Some labs may require additionao setup. If this is the case, the setup steps will described in the lab's notes.
