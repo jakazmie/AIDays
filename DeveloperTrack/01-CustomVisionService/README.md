@@ -11,7 +11,7 @@ Don't hesitate to ask questions !
 The lab consists of 3 parts:
 - In the first part we will train, evaluate and fine tune a custom image classification model.
 - In the second part, we will use Custom Vision Python SDK to invoke the trained model using the Custom Vision Service's prediction endpoint. 
-- In the third part, we will export the  model as a docker image.
+- In the third part, we will export the  model.
 
 
 ## Scenario
