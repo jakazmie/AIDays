@@ -9,7 +9,7 @@ This folder contains hands-on labs that demonstrate how to develop intelligent a
   
 ## Lab environmant setup
 
-Follow the steps below to provision services that will be utilized during the labs:
+Follow the steps below to provision the services that will be utilized during the labs:
 
 ### Set up Cognitive Services
 
