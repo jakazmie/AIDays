@@ -19,12 +19,9 @@ In this step, you will learn how to access the REST prediction endpoint that was
 
 https://raw.githubusercontent.com/jakazmie/AIDays/master/DeveloperTrack/01-CustomVisionService/invoke_endpoint.ipynb
 
-  
-  You may receive a warning that your connection is not private. Ignore it and press **ADVANCE** to proceed.
+6. Start **invoke_endpoint.ipnyb**
 
-3. Start the `invoke_endpoint.ipynb` notebook located in `AIDays/DeveloperTrack/01-CustomVisionService`.
+7. Follow the instructor who will walk you through the notebook.
 
-4. Follow the instructor who will walk you through the notebook.
-
-5. After you have completed all steps in the notebook procedd to the [next excercise](export.md)
+8. After you have completed all steps in the notebook procedd to the [next excercise](export.md)
 
