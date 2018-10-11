@@ -16,12 +16,14 @@ https://customvision.ai
 
 ![Custom vision](images/projects.png)
 
-4. In the **NEW PROJECT** dialog box select *Classification* for the project type, *Multiclass* for the classification type, and *General* for the domain type. Then click on **create new** *Resource Group*
+4. In the **Resource Group** field select the resource group you created during the lab setup.
+
+5. Select *Classification* for the project type, *Multiclass* for the classification type, and *General* for the domain type. Then click on **create new** *Resource Group*
 
 ![new project](images/newproject.png)
 
   
-5. In the **Resource Group** field select the resource group you created during the lab setup.
+
 
 
 ## Prepare training data
