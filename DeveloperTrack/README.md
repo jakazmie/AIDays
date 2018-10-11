@@ -13,7 +13,7 @@ Follow the steps below to provision services that will be utilized during the la
 
 ### Provision Cognitive Services
 
-* Login to Azure Portal:
+* Login to Azure Portal using credentials bound to your Azure subscription:
 http://portal.azure.com
 
 * Navigate to Cognitive Services blade in Azure Portal. You can browse through the portal starting with **Create a resource** link or take a shortcut using the following link. 
@@ -56,3 +56,20 @@ https://ms.portal.azure.com/#blade/Microsoft_Azure_Marketplace/GalleryResultsLis
   * Choose **F0** Pricing tier
   * Choose the resource group you created for Custom Vision Services
   
+### Provision Azure Notebooks
+
+* Navigate to: https://notebooks.azure.com
+* Login to Azure Notebooks using credentials bound to your Azure subscription
+* Click on **Libraries**
+* Click on **New Library**
+* Enter **Library Name** - any name you want
+* Enter **Library ID** - any ID you want
+* Click on **Create**
+
+
+You are now ready to proceed to labs. Some labs may require additionao setup. If this is the case, the setup steps will described in the lab's notes.
+
+Enjoy.
+
+
+
