@@ -29,3 +29,5 @@ https://ms.portal.azure.com/#blade/Microsoft_Azure_Marketplace/GalleryResultsLis
   * Select **F0** as Training pricint tier
   * Create **a new Resource group**
   
+* Provision Text Analytics Service:
+  * 
