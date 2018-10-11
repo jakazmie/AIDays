@@ -30,7 +30,7 @@ https://raw.githubusercontent.com/jakazmie/AIDays/master/DataScientistTrack/02-A
 
 * Repeat for
 
-https://github.com/jakazmie/AIDays/edit/master/DataScientistTrack/02-AML-EndToEndWalkthrough/02-train.ipynb
+https://raw.githubusercontent.com/jakazmie/AIDays/master/DataScientistTrack/02-AML-EndToEndWalkthrough/02-train.ipynb
 
 https://raw.githubusercontent.com/jakazmie/AIDays/master/DataScientistTrack/02-AML-EndToEndWalkthrough/03-deploy.ipynb
 
