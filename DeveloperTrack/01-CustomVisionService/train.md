@@ -22,7 +22,7 @@ https://customvision.ai
 
 ![new project](images/newproject.png)
 
- 6. Click on **Create**
+ 6. Click on **Create project**
 
 
 ## Prepare training data
