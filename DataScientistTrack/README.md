@@ -6,9 +6,38 @@ that the instructor will walk participants through the lab, deep dive into the c
 
 ## Pre-requisties
 
-You will use Azure Data Science Virtual Machine as your development environment for Azure ML service labs. You will use Azure Databricks workspace for Azure Databricks labs. To set up the prequisties you need:
-- An Azure subscription with enough credits - TBD
+- An Azure subscription. You will need to be able to provision Azure Machine Learning workspace and Azure Batch AI clusters with NC6 VMs
 - Chrome browser
+
+You can use Azure Data Science Virtual Machine or Azure Notebooks as your lab environment
+
+
+### To set up Azure Notebooks
+
+* Navigate to: https://notebooks.azure.com
+* Login to Azure Notebooks using credentials bound to your Azure subscription
+* Click on **Libraries**
+* Click on **New Library**
+* Enter **Library Name** - any name you want
+* Enter **Library ID** - any ID you want
+* Click on **Create**
+* After your Library is ready
+* Click on **+** icon
+* Click on **From URL**
+* In **File Url** paste the below link
+
+https://raw.githubusercontent.com/jakazmie/AIDays/master/DataScientistTrack/02-AML-EndToEndWalkthrough/01-experiment.ipynb
+
+* Repeat for
+
+https://github.com/jakazmie/AIDays/edit/master/DataScientistTrack/02-AML-EndToEndWalkthrough/02-train.ipynb
+
+https://raw.githubusercontent.com/jakazmie/AIDays/master/DataScientistTrack/02-AML-EndToEndWalkthrough/03-deploy.ipynb
+
+**Important**. Make sure to set the kernel of each notebook in the lab to *Python 3.6*.
+
+
+
 
 
 ### To set up Azure Data Science Virtual Machine
@@ -52,9 +81,12 @@ pip install h5py
 jupyter nbextension enable --py --user azureml.train.widgets
 ```
 
-5. You are ready to start the labs
+
 
 **Important**. Make sure to set the kernel of each notebook in the lab to *Python 3.6 - AzureML*.
 
 
 
+You are now ready to proceed to labs. Some labs may require additionao setup. If this is the case, the setup steps will described in the lab's notes.
+
+Enjoy.
