@@ -20,14 +20,24 @@ http://portal.azure.com
 https://ms.portal.azure.com/#blade/Microsoft_Azure_Marketplace/GalleryResultsListBlade/selectedSubMenuItemId/%7B%22menuItemId%22%3A%22gallery%2FCognitiveServices_MP%2FCognitiveService%22%2C%22resourceGroupId%22%3A%22%22%2C%22resourceGroupLocation%22%3A%22%22%2C%22dontDiscardJourney%22%3Afalse%2C%22launchingContext%22%3A%7B%22source%22%3A%5B%22GalleryFeaturedMenuItemPart%22%5D%2C%22menuItemId%22%3A%22CognitiveServices_MP%22%2C%22subMenuItemId%22%3A%22CognitiveService%22%7D%7D
 
 
-* Provision Custom Vision Service
+* Provision **Custom Vision Service**
   * Click on **Custom Vision (preview)**
   * Click on **Create**
-  * Enter the name for the service
-  * Select **South Central US** as a location
-  * Select **F0** as Prediction pricing tier
-  * Select **F0** as Training pricint tier
+  * Enter a name for the service
+  * Choose **South Central US** location
+  * Choose **F0** Prediction pricing tier
+  * Choose **F0** Training pricint tier
   * Create **a new Resource group**
   
-* Provision Text Analytics Service:
+* Provision **Text Analytics Service**
+  * Navigate back to the Cognitive Services blade
+  * Click on **Text Analytics**
+  * Click on **Create**
+  * Enter a name for the service
+  * Choose **South Central US** location
+  * Choose **F0** Pricing tier
+  * Choose the resource group you created for Custom Vision Services
+  
+* Provision  **Bing Search Service**
   * 
+  
