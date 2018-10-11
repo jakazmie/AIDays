@@ -47,7 +47,7 @@ https://ms.portal.azure.com/#blade/Microsoft_Azure_Marketplace/GalleryResultsLis
   * Choose **F0** Pricing tier
   * Choose the resource group you created for Custom Vision Services
   
- * Provision  **Bing Speech Service**
+* Provision  **Bing Speech Service**
   * Navigate back to the Cognitive Services blade
   * Click on **Bing Speech**
   * Click on **Create**
