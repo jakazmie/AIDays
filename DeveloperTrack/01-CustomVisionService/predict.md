@@ -8,20 +8,15 @@ In this step, you will learn how to access the REST prediction endpoint that was
 
 
 2. Navigate to the library you created in Azure Notebooks during the setup
+https://notebooks.azure.com
 
-   1. https://notebooks.azure.com
-   2. Click on **Libraries**
-   3. Click on *Your library name*
+3. Click on **Libraries**
+
+4. Click on *Your library name*
    
-3. Click on **+** icon
-4. Click on **From URL**
-5. in **File Url** paste the below link
+5. Start **invoke_endpoint.ipnyb**
 
-https://raw.githubusercontent.com/jakazmie/AIDays/master/DeveloperTrack/01-CustomVisionService/invoke_endpoint.ipynb
+6. Follow the instructor who will walk you through the notebook.
 
-6. Start **invoke_endpoint.ipnyb**
-
-7. Follow the instructor who will walk you through the notebook.
-
-8. After you have completed all steps in the notebook procedd to the [next excercise](export.md)
+7. After you have completed all steps in the notebook procedd to the [next excercise](export.md)
 
