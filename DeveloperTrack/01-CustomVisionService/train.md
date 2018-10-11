@@ -21,9 +21,7 @@ https://customvision.ai
 ![new project](images/newproject.png)
 
   
-5. Fill the form to create a resource group that will host Custom Vision Service resources. Use your Azure subscription.
-
-![new resource group](images/rg.png)
+5. In the **Resource Group** field select the resource group you created during the lab setup.
 
 
 ## Prepare training data
