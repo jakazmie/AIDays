@@ -9,9 +9,9 @@ In this step, you will learn how to access the REST prediction endpoint that was
 
 2. Navigate to the library you created in Azure Notebooks during the setup
 
-   i. https://notebooks.azure.com
-   ii. Click on **Libraries**
-   iii. Click on *Your library name*
+   1. https://notebooks.azure.com
+   2. Click on **Libraries**
+   3. Click on *Your library name*
    
 3. Click on **+** icon
 4. Click on **From URL**
