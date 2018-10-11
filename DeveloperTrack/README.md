@@ -14,7 +14,6 @@ Follow the steps below to provision services that will be utilized during the la
 ### Provision Cognitive Services
 
 * Login to Azure Portal:
-
 http://portal.azure.com
 
 * Navigate to Cognitive Services blade in Azure Portal. You can browse through the portal starting with **Create a resource** link or take a shortcut using the following link. 
