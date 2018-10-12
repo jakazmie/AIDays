@@ -32,6 +32,7 @@ Developed | Cultivated | Barren
 
 https://raw.githubusercontent.com/jakazmie/AIDays/master/DeveloperTrack/01-CustomVisionService/invoke_endpoint.ipynb
 
+5. Click **Upload**
 
 [Next step](train.md)
 
