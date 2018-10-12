@@ -78,7 +78,7 @@ https://raw.githubusercontent.com/jakazmie/AIDays/master/DeveloperTrack/02-TextA
 
 
 
-You are now ready to proceed to labs. Some labs may require additionao setup. If this is the case, the setup steps will described in the lab's notes.
+You are now ready to proceed to the labs. Some labs may require additional setup. If this is the case, the setup steps will described in the lab's notes.
 
 Enjoy.
 
