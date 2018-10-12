@@ -23,7 +23,15 @@ Developed | Cultivated | Barren
 ![Developed](images/developed1.png) | ![Cultivated](images/cultivated1.png) | ![Barren](images/barren1.png)
 
 
-Let's start
+## Lab Environment setup
+
+* Navigate to your Library in Azure Notebooks
+* Click on **+** icon
+* Click on **From URL**
+* In **File Url** paste the below link
+
+https://raw.githubusercontent.com/jakazmie/AIDays/master/DeveloperTrack/01-CustomVisionService/invoke_endpoint.ipynb
+
 
 [Next step](train.md)
 
