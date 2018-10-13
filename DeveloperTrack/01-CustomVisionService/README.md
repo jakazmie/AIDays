@@ -49,6 +49,6 @@ After the upload have been completed, start the `train.ipynb` notebook in Azure 
 
 If you prefer to use Custom Vision Service web interface continue to the next step.
 
-[Next step](export.md)
+[Next step](train.md)
 
 
