@@ -17,6 +17,7 @@ https://ms.portal.azure.com/#create/Microsoft.CognitiveServicesTextAnalytics
 
 
 
+### Configure Azure Notebooks
 
 1. Navigate to your library in Azure Notebooks
 2. Click on **+** icon.
