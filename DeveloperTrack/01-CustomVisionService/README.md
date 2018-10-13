@@ -42,7 +42,7 @@ https://ms.portal.azure.com/#create/Microsoft.CognitiveServicesCustomVision
 
 5. Choose **F0** Prediction pricing tier
 
-6. Choose **F0** Training pricint tier
+6. Choose **F0** Training pricing tier
 
 7. **Create new** Resource group
 
