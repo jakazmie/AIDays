@@ -26,6 +26,7 @@ You can walk through the lab in two ways:
 - Using Custom Vision Service web interface
 - Using Custom Vision Service Python SDK
 
+## To walk through the lab using Python SDK
 If you prefer to work with the SDK, upload two Jupyter notebooks into the Azure Notebooks library you created before:
 
 * Navigate to your Library in Azure Notebooks
@@ -44,6 +45,7 @@ https://raw.githubusercontent.com/jakazmie/AIDays/master/DeveloperTrack/01-Custo
 
 After the upload have been completed, start the `train.ipynb` notebook in Azure Notebooks.
 
+## To walk through the lab using Custom Vision Service web interface
 
 If you prefer to use Custom Vision Service web interface continue to the next step.
 
