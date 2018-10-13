@@ -10,7 +10,7 @@ Don't hesitate to ask questions !
 ## What will you learn during the lab?
 The lab consists of 2 parts:
 - In the first part you will train, evaluate and test a custom image classification model.
-- In the second part, you will export the trained model
+- In the second part, you will learned how to operationalize the trained model.
 
 
 ## Scenario
