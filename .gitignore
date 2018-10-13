@@ -7,6 +7,7 @@
 *.zip
 *.wav
 *.hd5
+aerial/
 aerialimages/
 aerialsmall/
 aerialmed/
