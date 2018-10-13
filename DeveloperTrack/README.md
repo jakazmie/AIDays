@@ -19,8 +19,8 @@ You can also use Azure Notebooks.
 * Login to Azure Notebooks using credentials bound to your Azure subscription
 * Click on **Libraries**
 * Click on **New Library**
-* Enter **Library Name** - any name you want
-* Enter **Library ID** - any ID you want
+* Enter **Library Name** - any name you want. E.g. *AIDays*
+* Enter **Library ID** - any ID you want. E.g. *aidays*
 * Click on **Create**
 
 
