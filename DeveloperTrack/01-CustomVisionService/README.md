@@ -10,7 +10,7 @@ Don't hesitate to ask questions !
 ## What will you learn during the lab?
 The lab consists of 2 parts:
 - In the first part you will train, evaluate and test a custom image classification model.
-- In the second part, you will learned how to operationalize the trained model.
+- In the second part, you will learn how to operationalize the trained model.
 
 
 ## Scenario
@@ -25,6 +25,30 @@ Developed | Cultivated | Barren
 You can walk through the lab in two ways:
 - Using Custom Vision Service web interface
 - Using Custom Vision Service Python SDK
+
+Before you can start any of the lab's versions you need to provision **Training** and **Prediction** services in Azure.
+
+## Provision Custom Vision services in Azure
+
+1. Login to Azure Portal using credentials bound to your Azure subscription:
+http://portal.azure.com
+
+2. Navigate to Cognitive Services blade in Azure Portal. You can browse through the portal starting with **Create a resource** link or take a shortcut using the following link.
+https://ms.portal.azure.com/#create/Microsoft.CognitiveServicesCustomVision
+
+3. Enter a name for your service
+
+4. Choose **South Central US** location
+
+5. Choose **F0** Prediction pricing tier
+
+6. Choose **F0** Training pricint tier
+
+7. **Create new** Resource gropu
+
+
+## Set up environment for the Python SDK version of the lab
+
 
 ## To walk through the lab using Python SDK
 If you prefer to work with the SDK, upload two Jupyter notebooks into the Azure Notebooks library you created before:
