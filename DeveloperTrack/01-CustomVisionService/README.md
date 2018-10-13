@@ -22,7 +22,11 @@ Developed | Cultivated | Barren
 ![Developed](images/developed1.png) | ![Cultivated](images/cultivated1.png) | ![Barren](images/barren1.png)
 
 
-## Lab Environment setup
+You can walk through the lab in two ways:
+- Using Custom Vision Service web interface
+- Using Custom Vision Service Python SDK
+
+If you prefer to use code-first approach start upload two Jupyter notebooks into the Azure Notebooks library you created before:
 
 * Navigate to your Library in Azure Notebooks
 * Click on **+** icon
@@ -37,13 +41,11 @@ https://raw.githubusercontent.com/jakazmie/AIDays/master/DeveloperTrack/01-Custo
 
 https://raw.githubusercontent.com/jakazmie/AIDays/master/DeveloperTrack/01-CustomVisionService/export.ipynb
 
-You can walk through the lab in two ways:
-- Using Custom Vision Service web interface
-- Using Custom Vision Service Python SDK
 
-If you prefer to use code-first interface start ` train.ipynb` notebook in Azure Notebooks.
+After the upload have been completed, start the `train.ipynb` notebook in Azure Notebooks.
 
-Otherwise continue to the next step.
+
+If you prefer to use Custom Vision Service web interface continue to the next step.
 
 [Next step](train.md)
 
