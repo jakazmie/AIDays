@@ -26,7 +26,7 @@ You can walk through the lab in two ways:
 - Using Custom Vision Service web interface
 - Using Custom Vision Service Python SDK
 
-If you prefer to work with ASDK, upload two Jupyter notebooks into the Azure Notebooks library you created before:
+If you prefer to work with the SDK, upload two Jupyter notebooks into the Azure Notebooks library you created before:
 
 * Navigate to your Library in Azure Notebooks
 * Click on **+** icon
