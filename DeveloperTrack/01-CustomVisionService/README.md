@@ -8,10 +8,9 @@ The lab is designed to be instructor guided.  In addition to walking you through
 Don't hesitate to ask questions !
 
 ## What will you learn during the lab?
-The lab consists of 3 parts:
-- In the first part we will train, evaluate and fine tune a custom image classification model.
-- In the second part, we will use Custom Vision Python SDK to invoke the trained model using the Custom Vision Service's prediction endpoint. 
-- In the third part, we will export the  model.
+The lab consists of 2 parts:
+- In the first part you will train, evaluate and test a custom image classification model.
+- In the second part, you will export the trained model
 
 
 ## Scenario
@@ -30,9 +29,21 @@ Developed | Cultivated | Barren
 * Click on **From URL**
 * In **File Url** paste the below link
 
-https://raw.githubusercontent.com/jakazmie/AIDays/master/DeveloperTrack/01-CustomVisionService/invoke_endpoint.ipynb
+https://raw.githubusercontent.com/jakazmie/AIDays/master/DeveloperTrack/01-CustomVisionService/train.ipynb
 
 5. Click **Upload**
+
+* Repeat for 
+
+https://raw.githubusercontent.com/jakazmie/AIDays/master/DeveloperTrack/01-CustomVisionService/export.ipynb
+
+You can walk through the lab in two ways:
+- Using Custom Vision Service web interface
+- Using Custom Vision Service Python SDK
+
+If you prefer to use code-first interface start ` train.ipynb` notebook in Azure Notebooks.
+
+Otherwise continue to the next step.
 
 [Next step](train.md)
 
