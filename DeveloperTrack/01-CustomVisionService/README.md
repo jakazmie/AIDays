@@ -44,7 +44,7 @@ https://ms.portal.azure.com/#create/Microsoft.CognitiveServicesCustomVision
 
 6. Choose **F0** Training pricint tier
 
-7. **Create new** Resource gropu
+7. **Create new** Resource group
 
 
 ## Set up environment for the Python SDK version of the lab
