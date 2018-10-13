@@ -26,7 +26,7 @@ You can walk through the lab in two ways:
 - Using Custom Vision Service web interface
 - Using Custom Vision Service Python SDK
 
-Before you can start any of the lab's versions you need to provision **Training** and **Prediction** services in Azure.
+Both versions of the lab require you need to provision **Training** and **Prediction** services in Azure.
 
 ## Provision Custom Vision services in Azure
 
