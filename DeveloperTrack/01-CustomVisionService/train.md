@@ -90,7 +90,10 @@ Recall that the images tagged as *Developed* had the lowest performance metrics.
 ![Second iteration](images/img11.PNG)
 
 
-Congratulations. You have developed an accurate custom image classifier.
+## Test the model 
+You can test the model by clicking on **Quick Test** and using one of the images in the `test` subfolder of the downloaded dataset.
 
-[Next step](predict.md)
+Congratulations! 
+
+[Next step](deploy.md)
 
