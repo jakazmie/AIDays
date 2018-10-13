@@ -1,6 +1,6 @@
 # Part 1 - Model training and evaluation
 
-In this part of the lab we will train, evaluate, and fine tune a custom image classification model using Custom Vision Service web interface. Note that it is also possible to script the modeling workflow using Custom Vision Service SDK. 
+In this part of the lab we will train, evaluate, and test a custom image classification model using Custom Vision Service web interface. Note that it is also possible to script the modeling workflow using Custom Vision Service SDK. 
 
 ## Create Custom Vision Service project
 
