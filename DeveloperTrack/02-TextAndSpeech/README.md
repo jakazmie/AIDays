@@ -2,6 +2,22 @@
 
 ## To set up the lab
 
+### Provision **Text Analytics Service**
+1. Navigate to to **Text Analytics Service** blade in Azure Portal
+https://ms.portal.azure.com/#create/Microsoft.CognitiveServicesTextAnalytics
+
+2. Enter a name for the service
+
+3. Choose your prefered location
+
+4. Choose **F0** Pricing tier
+
+5. **Create new** Resource group. If you went through the Custom Vision Service lab you can re-use that group
+
+
+
+
+
 1. Navigate to your library in Azure Notebooks
 2. Click on **+** icon.
 3. Click on **From URL**
