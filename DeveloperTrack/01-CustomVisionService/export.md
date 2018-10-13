@@ -1,4 +1,4 @@
-# Part 2 - Exporting
+# Part 2 - Operationalization
 Custom Vision Service allows classifiers to be exported to run offline. You can embed your exported classifier into an application and run it locally on a device for real-time classification.
 
 Custom Vision Service supports the following exports:
