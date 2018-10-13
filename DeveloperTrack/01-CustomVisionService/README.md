@@ -35,7 +35,7 @@ If you prefer to work with the SDK, upload two Jupyter notebooks into the Azure 
 
 https://raw.githubusercontent.com/jakazmie/AIDays/master/DeveloperTrack/01-CustomVisionService/train.ipynb
 
-5. Click **Upload**
+* Click **Upload**
 
 * Repeat for 
 
