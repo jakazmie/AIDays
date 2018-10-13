@@ -95,5 +95,5 @@ You can test the model by clicking on **Quick Test** and using one of the images
 
 Congratulations! 
 
-[Next step](deploy.md)
+[Next step](export.md)
 
