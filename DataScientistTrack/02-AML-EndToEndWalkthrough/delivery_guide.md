@@ -1,5 +1,7 @@
 ## AML End-To-End Walkthrough Delivery Guide.
 
+Instructor notes.
+
 This lab was designed to be instructor led. It is expected that the instructor will walk students through the lab's notebooks 
 explaining key concepts, code snipptets, and answering any questions.
 
