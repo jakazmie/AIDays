@@ -52,7 +52,7 @@ exit
 
 3. Use your username and password to log in to Jupyter
 
-4. This step is a temporary walk-around to address issues with AML Widgets on Azure Data Science Machine
+4. The next step is a temporary walk-around to address issues with AML Widgets on Azure Data Science Machine
 ```
 # Log back to your DSVM
 ssh <your username>@<vm ip address>
