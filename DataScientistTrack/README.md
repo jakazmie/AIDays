@@ -21,22 +21,6 @@ You can use Azure Data Science Virtual Machine or Azure Notebooks as your lab en
 * Enter **Library Name** - any name you want
 * Enter **Library ID** - any ID you want
 * Click on **Create**
-* After your Library is ready
-* Click on **+** icon
-* Click on **From URL**
-* In **File Url** paste the below link
-
-https://raw.githubusercontent.com/jakazmie/AIDays/master/DataScientistTrack/02-AML-EndToEndWalkthrough/01-experiment.ipynb
-
-* Repeat for
-
-https://raw.githubusercontent.com/jakazmie/AIDays/master/DataScientistTrack/02-AML-EndToEndWalkthrough/02-train.ipynb
-
-https://raw.githubusercontent.com/jakazmie/AIDays/master/DataScientistTrack/02-AML-EndToEndWalkthrough/03-deploy.ipynb
-
-**Important**. Make sure to set the kernel of each notebook in the lab to *Python 3.6*.
-
-
 
 
 
@@ -44,8 +28,8 @@ https://raw.githubusercontent.com/jakazmie/AIDays/master/DataScientistTrack/02-A
 
 1. Follow the below link to provision Data Science Virtual Machine. 
    - Create a new resource group for your VM
-   - Use **D8s_v3** as a VM type. Although, the labs will run on other configurations this is the minimum configuration we recommend. 
-   - Shoose *username and password* as the authentication type. 
+   - Use **DS3_v2** as a VM type. Although, the labs will run on other configurations this is the minimum configuration we recommend. 
+   - Choose *username and password* as the authentication type. 
    - Use default values for all other parameters.
 
  https://portal.azure.com/#create/microsoft-dsvm.linux-data-science-vm-ubuntulinuxdsvmubuntu
