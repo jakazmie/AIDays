@@ -58,11 +58,6 @@ ssh <your username>@<vm ip address>
 cd notebooks
 git clone https://github.com/jakazmie/AIDays.git
 
-# Install modules required by the lab which are missing from the default configuration
-source activate py36
-pip install h5py
-
-# logout from VM
 exit
 ```
 
@@ -76,6 +71,7 @@ exit
 ssh <your username>@<vm ip address>
 
 # Enable AML widgets. This is to address the bug in DSVM default configuration
+source activate py36
 jupyter nbextension enable --py --user azureml.train.widgets
 ```
 
