@@ -35,6 +35,9 @@ https://raw.githubusercontent.com/jakazmie/AIDays/master/DataScientistTrack/02-A
 
 Start `00-intro.ipynb` to begin the lab.
 
+**Important**. Make sure to set the kernel of each notebook in the lab to *Python 3.6 - AzureML*.
+
+
 ### To set up Azure Data Science Virtual Machine
 
 1. Follow the below link to provision Data Science Virtual Machine. 
@@ -76,23 +79,12 @@ ssh <your username>@<vm ip address>
 jupyter nbextension enable --py --user azureml.train.widgets
 ```
 
-
 **Important**. Make sure to set the kernel of each notebook in the lab to *Python 3.6 - AzureML*.
 
 
-
-You are now ready to proceed to labs. Some labs may require additionao setup. If this is the case, the setup steps will described in the lab's notes.
-
 Enjoy.
 
 
-If you are using Azure Data Science Virtual Machine and you have stepped through the setup instructions you are ready to go.
-
-To set up the environment on Azure Notebooks upload the lab's Jupyter notebooks to your Azure Notebooks library:
-
-
-
-Enjoy.
 
 
 
