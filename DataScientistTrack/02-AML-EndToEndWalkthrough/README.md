@@ -21,11 +21,14 @@ You can use Azure Data Science Virtual Machine or Azure Notebooks as your lab en
 8. Click on **+** icon.
 9. Click on **From URL**
 10. In **File Url** paste the below link
+
 https://raw.githubusercontent.com/jakazmie/AIDays/master/DataScientistTrack/02-AML-EndToEndWalkthrough/00-intro.ipynb
 11. Click **Upload**
 12. Repeat for:
-https://raw.githubusercontent.com/jakazmie/AIDays/master/DataScientistTrack/02-AML-EndToEndWalkthrough/01-train.ipynb
-https://raw.githubusercontent.com/jakazmie/AIDays/master/DataScientistTrack/02-AML-EndToEndWalkthrough/02-deploy.ipynb
+
+https://raw.githubusercontent.com/jakazmie/AIDays/master/DataScientistTrack/02-AML-EndToEndWalkthrough/01-feature-engineering.ipynb
+https://raw.githubusercontent.com/jakazmie/AIDays/master/DataScientistTrack/02-AML-EndToEndWalkthrough/02-train.ipynb
+https://raw.githubusercontent.com/jakazmie/AIDays/master/DataScientistTrack/02-AML-EndToEndWalkthrough/03-deploy.ipynb
 
 Start `00-intro.ipynb` to begin the lab.
 
