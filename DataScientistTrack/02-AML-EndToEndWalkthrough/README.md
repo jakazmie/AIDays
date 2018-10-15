@@ -11,27 +11,35 @@ You can use Azure Data Science Virtual Machine or Azure Notebooks as your lab en
 
 ### To set up Azure Notebooks
 
-* Navigate to: https://notebooks.azure.com
-* Login to Azure Notebooks using credentials bound to your Azure subscription
-* Click on **Libraries**
-* Click on **New Library**
-* Enter **Library Name** - any name you want
-* Enter **Library ID** - any ID you want
-* Click on **Create**
+1. Navigate to: https://notebooks.azure.com
+2. Login to Azure Notebooks using credentials bound to your Azure subscription
+3. Click on **Libraries**
+4. Click on **New Library**
+5. Enter **Library Name** - any name you want
+6. Enter **Library ID** - any ID you want
+7. Click on **Create**
+8. Click on **+** icon.
+9. Click on **From URL**
+10. In **File Url** paste the below link
+https://raw.githubusercontent.com/jakazmie/AIDays/master/DataScientistTrack/02-AML-EndToEndWalkthrough/00-intro.ipynb
+11. Click **Upload**
+12. Repeat for:
+https://raw.githubusercontent.com/jakazmie/AIDays/master/DataScientistTrack/02-AML-EndToEndWalkthrough/01-train.ipynb
+https://raw.githubusercontent.com/jakazmie/AIDays/master/DataScientistTrack/02-AML-EndToEndWalkthrough/02-deploy.ipynb
 
-
+Start `00-intro.ipynb` to begin the lab.
 
 ### To set up Azure Data Science Virtual Machine
 
 1. Follow the below link to provision Data Science Virtual Machine. 
    - Create a new resource group for your VM
-   - Use **DS3_v2** as a VM type. Although, the labs will run on other configurations this is the minimum configuration we recommend. 
+   - Use **DS3_v2** or better as a VM type. Although, the labs will run on other configurations this is the minimum configuration we recommend. 
    - Choose *username and password* as the authentication type. 
    - Use default values for all other parameters.
 
  https://portal.azure.com/#create/microsoft-dsvm.linux-data-science-vm-ubuntulinuxdsvmubuntu
 
-2. When your VM is ready use Azure Portal Cloud Shell to configure it up for the labs
+2. When your VM is ready use Azure Portal Cloud Shell to complete the configuration
 
 ```
 # Logon to your VM
@@ -63,7 +71,6 @@ jupyter nbextension enable --py --user azureml.train.widgets
 ```
 
 
-
 **Important**. Make sure to set the kernel of each notebook in the lab to *Python 3.6 - AzureML*.
 
 
@@ -77,17 +84,7 @@ If you are using Azure Data Science Virtual Machine and you have stepped through
 
 To set up the environment on Azure Notebooks upload the lab's Jupyter notebooks to your Azure Notebooks library:
 
-1. Navigate to your Azure Notebooks library.
-2. Click on **+** icon.
-3. Click on **From URL**
-4. In **File Url** paste the below link
-https://raw.githubusercontent.com/jakazmie/AIDays/master/DataScientistTrack/02-AML-EndToEndWalkthrough/00-intro.ipynb
-5. Click **Upload**
-6. Repeat for:
-https://raw.githubusercontent.com/jakazmie/AIDays/master/DataScientistTrack/02-AML-EndToEndWalkthrough/01-train.ipynb
-https://raw.githubusercontent.com/jakazmie/AIDays/master/DataScientistTrack/02-AML-EndToEndWalkthrough/02-deploy.ipynb
 
-Start `00-intro.ipynb` to begin the lab.
 
 Enjoy.
 
