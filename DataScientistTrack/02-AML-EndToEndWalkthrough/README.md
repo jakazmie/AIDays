@@ -35,7 +35,7 @@ https://raw.githubusercontent.com/jakazmie/AIDays/master/DataScientistTrack/02-A
 
 Start `00-intro.ipynb` to begin the lab.
 
-**Important**. Make sure to set the kernel of each notebook in the lab to *Python 3.6 - AzureML*.
+**Important. Make sure to set the kernel of each notebook in the lab to *Python 3.6*.**
 
 
 ### To set up Azure Data Science Virtual Machine
