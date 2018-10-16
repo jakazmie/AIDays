@@ -32,7 +32,6 @@ https://ms.portal.azure.com/#create/Microsoft.CognitiveServicesLUIS
 2. Click on **+** icon.
 3. Click on **From URL**
 4. Copy and paste the following URL into **File URL**
-* Repeat for
 
 https://raw.githubusercontent.com/jakazmie/AIDays/master/DeveloperTrack/02-TextAndSpeech/cognitive-services-text-speech.ipynb
 
